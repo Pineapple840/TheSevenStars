@@ -1,0 +1,4 @@
+images {
+  image: "/game resources/images/black.png"
+}
+extrude_borders: 2

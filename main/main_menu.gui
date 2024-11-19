@@ -1,0 +1,251 @@
+script: "/main/scripts/main_menu.gui_script"
+fonts {
+  name: "connection-serif"
+  font: "/game resources/fonts/connection-serif.font"
+}
+fonts {
+  name: "connection_bitmap"
+  font: "/game resources/fonts/connection_bitmap.font"
+}
+textures {
+  name: "assets"
+  texture: "/main/assets.atlas"
+}
+textures {
+  name: "black"
+  texture: "/game resources/images/black.atlas"
+}
+nodes {
+  position {
+    x: 512.0
+    y: 288.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "*insert my epic logo here*"
+  font: "connection_bitmap"
+  id: "p840_logo"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 288.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "assets/Space Background2"
+  id: "background"
+  layer: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 512.0
+    y: 288.0
+  }
+  scale {
+    x: 7.0
+    y: 3.0
+  }
+  type: TYPE_BOX
+  texture: "black/black"
+  id: "black"
+  layer: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 991.0
+    y: 300.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 105.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Start Game"
+  font: "connection_bitmap"
+  id: "start_game"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 990.0
+    y: 240.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 68.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Options\n"
+  ""
+  font: "connection_bitmap"
+  id: "options"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 991.0
+    y: 180.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 60.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Scores"
+  font: "connection_bitmap"
+  id: "scores"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 991.0
+    y: 120.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 64.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Credits"
+  font: "connection_bitmap"
+  id: "credits"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 991.0
+    y: 60.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 34.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Exit"
+  font: "connection_bitmap"
+  id: "exit"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 43.0
+    y: 399.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  size {
+    x: 60.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "The \n"
+  "Seven \n"
+  "Stars"
+  font: "connection_bitmap"
+  id: "the_seven_stars"
+  pivot: PIVOT_W
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 781.0
+    y: 300.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 20.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: ">>"
+  font: "connection_bitmap"
+  id: "left_selection_arrows"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 991.0
+    y: 300.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 20.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "<<"
+  font: "connection_bitmap"
+  id: "right_selection_arrows"
+  pivot: PIVOT_W
+  layer: "button_layer"
+  inherit_alpha: true
+}
+layers {
+  name: "background"
+}
+layers {
+  name: "button_layer"
+}
+layers {
+  name: "front_layer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

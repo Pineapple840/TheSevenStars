@@ -1,0 +1,7 @@
+images {
+  image: "/game resources/images/Main Ship - Base - Full health.png"
+}
+images {
+  image: "/game resources/images/Space Background2.png"
+}
+extrude_borders: 2

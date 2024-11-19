@@ -1,0 +1,55 @@
+function init(self)
+	msg.post("@render:", "use_camera_projection")
+end
+
+function update(self, dt)
+	local upscale_value = 2 
+	
+	-- get the display size set in game.project
+	local display_width = sys.get_config_int("display.width")
+	local display_height = sys.get_config_int("display.height")
+
+	-- get the actual display size
+	local current_width, current_height = window.get_size()
+
+	local width_zoom = current_width/display_width
+	local height_zoom = current_height/display_height
+	if height_zoom > width_zoom then
+		go.set("#camera", "orthographic_zoom", width_zoom * upscale_value)
+	else
+		go.set("#camera", "orthographic_zoom", height_zoom * upscale_value)
+	end
+end
+
+function fixed_update(self, dt)
+	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
+	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
+	-- Physics section of game.project
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Learn more: https://defold.com/manuals/message-passing/
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here. The game object this script is attached to
+	-- must have acquired input focus:
+	--
+	--    msg.post(".", "acquire_input_focus")
+	--
+	-- All mapped input bindings will be received. Mouse and touch input will
+	-- be received regardless of where on the screen it happened.
+	-- Learn more: https://defold.com/manuals/input/
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

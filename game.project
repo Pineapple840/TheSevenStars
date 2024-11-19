@@ -1,0 +1,21 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[script]
+shared_state = 1
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = The Seven Stars
+
+[graphics]
+default_texture_min_filter = nearest
+default_texture_mag_filter = nearest
+
+[display]
+width = 1024
+height = 576
+fullscreen = 0
+

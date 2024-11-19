@@ -1,0 +1,92 @@
+script: "/main/scripts/main_menu.gui_script"
+nodes {
+  position {
+    x: -512.0
+    y: -288.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_TEMPLATE
+  id: "menu"
+  inherit_alpha: true
+  template: "/main/main_menu.gui"
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/p840_logo"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "menu/background"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "menu/black"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/start_game"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/options"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/scores"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/credits"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/exit"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/the_seven_stars"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/left_selection_arrows"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "menu/right_selection_arrows"
+  parent: "menu"
+  template_node_child: true
+}
+layers {
+  name: "background"
+}
+layers {
+  name: "button_layer"
+}
+layers {
+  name: "front_layer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

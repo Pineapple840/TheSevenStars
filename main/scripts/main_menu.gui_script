@@ -1,0 +1,74 @@
+-- This handles my main menu gui. Includes the splash screen and menu navigation.
+local main_menu_active = false
+
+local selection_counter = 0
+local right_selection_arrows_positions = {{991, 300}, {991, 240}, {991, 180}, {991, 120}, {991, 60}}
+local left_selection_arrows_positions = {{780, 300}, {855, 240}, {871, 180}, {862, 120}, {922, 60}}
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	
+	self.black = gui.get_node("black")
+	self.p840_logo = gui.get_node("p840_logo")
+	self.the_seven_stars = gui.get_node("the_seven_stars")
+	self.background = gui.get_node("background")
+	self.start_game = gui.get_node("start_game")
+	self.options = gui.get_node("options")
+	self.scores = gui.get_node("scores")
+	self.credits = gui.get_node("credits")
+	self.exit = gui.get_node("exit")
+	self.left_selection_arrows = gui.get_node("left_selection_arrows")
+	self.right_selection_arrows = gui.get_node("right_selection_arrows")
+
+	gui.set_visible(self.black, false)
+	gui.set_enabled(self.p840_logo, false)
+	gui.set_enabled(self.the_seven_stars, false)
+	gui.set_enabled(self.background, false)
+	gui.set_enabled(self.start_game, false)
+	gui.set_enabled(self.options, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.credits, false)
+	gui.set_enabled(self.exit, false)
+	gui.set_enabled(self.left_selection_arrows, false)
+	gui.set_enabled(self.right_selection_arrows, false)
+
+	gui.set_enabled(self.p840_logo, true)
+	
+	timer.delay(5, false, function()
+		gui.set_enabled(self.p840_logo, false)
+		gui.set_enabled(self.the_seven_stars, true)
+		gui.set_enabled(self.background, true)
+		gui.set_enabled(self.start_game, true)
+		gui.set_enabled(self.options, true)
+		gui.set_enabled(self.scores, true)
+		gui.set_enabled(self.scores, true)
+		gui.set_enabled(self.credits, true)
+		gui.set_enabled(self.exit, true)
+		gui.set_enabled(self.left_selection_arrows, true)
+		gui.set_enabled(self.right_selection_arrows, true)
+
+		main_menu_active = true
+	end) 
+end
+
+
+function on_input(self, action_id, action)
+	if action_id == hash("down") and action.pressed and main_menu_active == true then
+		selection_counter = selection_counter + 1
+	end
+
+	if action_id == hash("up") and action.pressed and main_menu_active == true then
+		selection_counter = selection_counter - 1
+	end
+		
+	local temp_selection_counter = (selection_counter % 5) + 1
+
+	
+	gui.set_position(self.left_selection_arrows,
+	vmath.vector3(left_selection_arrows_positions[temp_selection_counter][1], left_selection_arrows_positions[temp_selection_counter][2], 0))
+		
+	gui.set_position(self.right_selection_arrows,
+	 vmath.vector3(right_selection_arrows_positions[temp_selection_counter][1], right_selection_arrows_positions[temp_selection_counter][2], 0))
+		
+end

@@ -1,0 +1,5 @@
+font: "/game resources/fonts/ConnectionSerif.ttf"
+material: "/builtins/fonts/font.material"
+size: 32
+antialias: 0
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

@@ -1,0 +1,119 @@
+{
+  :code {
+    :find {
+      :term ""
+      :wrap true
+    }
+  }
+  :run {
+    :simulated-resolution nil
+  }
+  :workflow {
+    :recent-files [
+      [
+        "/input/game.input_binding"
+        :cljfx-form-view
+      ]
+      [
+        "/builtins/render/default.render"
+        :cljfx-form-view
+      ]
+      [
+        "/player.script"
+        :code
+      ]
+      [
+        "/builtins/render/default.render_script"
+        :code
+      ]
+      [
+        "/main/camerascript.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/fonts/connection_bitmap_0.tga"
+        :code
+      ]
+      [
+        "/main/fonts/connection-serif.font"
+        :scene
+      ]
+      [
+        "/builtins/fonts/label-df.material"
+        :cljfx-form-view
+      ]
+      [
+        "/builtins/fonts/label.material"
+        :cljfx-form-view
+      ]
+      [
+        "/main/fonts/connection_bitmap.font"
+        :scene
+      ]
+      [
+        "/builtins/fonts/label-fnt.material"
+        :cljfx-form-view
+      ]
+      [
+        "/builtins/fonts/font-df.material"
+        :cljfx-form-view
+      ]
+      [
+        "/builtins/fonts/font.material"
+        :cljfx-form-view
+      ]
+      [
+        "/builtins/fonts/font-fnt.material"
+        :cljfx-form-view
+      ]
+      [
+        "/game resources/fonts/connection_bitmap.font"
+        :scene
+      ]
+      [
+        "/game resources/fonts/connection-serif.font"
+        :scene
+      ]
+      [
+        "/main/assets.atlas"
+        :scene
+      ]
+      [
+        "/game resources/images/black.atlas"
+        :scene
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/main_menu_upscaler.gui"
+        :scene
+      ]
+      [
+        "/main/main_menu.gui"
+        :scene
+      ]
+    ]
+  }
+}
