@@ -31,10 +31,6 @@
         :code
       ]
       [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
         "/main/fonts/connection_bitmap_0.tga"
         :code
       ]
@@ -87,15 +83,7 @@
         :cljfx-form-view
       ]
       [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
         "/main/main_menu_upscaler.gui"
-        :scene
-      ]
-      [
-        "/game resources/images/player_ship.atlas"
         :scene
       ]
       [
@@ -115,12 +103,36 @@
         :scene
       ]
       [
+        "/game resources/images/player_ship.atlas"
+        :scene
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
         "/main/main.collection"
         :scene
       ]
       [
         "/main/scripts/main_menu.gui_script"
         :code
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_background.script"
+        :code
+      ]
+      [
+        "/game resources/images/level_backgrounds.atlas"
+        :scene
+      ]
+      [
+        "/main/levels.collection"
+        :scene
       ]
     ]
   }
