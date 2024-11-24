@@ -91,7 +91,7 @@
         :code
       ]
       [
-        "/main/main_menu.gui"
+        "/game resources/images/player_ship.atlas"
         :scene
       ]
       [
@@ -103,28 +103,12 @@
         :scene
       ]
       [
-        "/game resources/images/player_ship.atlas"
+        "/main/main_menu.gui"
         :scene
-      ]
-      [
-        "/main/scripts/main_controller.script"
-        :code
       ]
       [
         "/main/main.collection"
         :scene
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/scripts/level_background.script"
-        :code
       ]
       [
         "/game resources/images/level_backgrounds.atlas"
@@ -133,6 +117,22 @@
       [
         "/main/levels.collection"
         :scene
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_background.script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
       ]
     ]
   }

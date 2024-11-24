@@ -1,13 +1,20 @@
 -- Script summary: Provides general support related to game actions
 
+local function start_game(self)
+	print("Game Started!")
+	msg.post("/gui", "disable")
+	msg.post("/level_1/background", "enable")
+	msg.post("player", "enable")
+end
+
 function init(self)
 	msg.post("/level_1/background", "disable")
+	msg.post("player", "disable")
 end
+
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("start_game") then
-		print("Game Started!")
-		msg.post("/gui", "disable")
-		msg.post("/level_1/background", "enable")
+		start_game(self)
 	end
 end

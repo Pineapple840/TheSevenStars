@@ -1,8 +1,20 @@
+local enabled = false
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 end
 
+function on_message(self, message_id, message, sender)
+	if message_id == hash("enable") then
+		enabled = true
+	end
+end
+
 function on_input(self, action_id, action)
+
+	if enabled == false then 
+		return 
+	end
 	
 	if action_id == hash("left") then
 		local pos = go.get_position()
