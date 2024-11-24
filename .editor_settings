@@ -79,10 +79,6 @@
         :scene
       ]
       [
-        "/main/assets.atlas"
-        :scene
-      ]
-      [
         "/game resources/images/black.atlas"
         :scene
       ]
@@ -91,19 +87,7 @@
         :cljfx-form-view
       ]
       [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
         "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
         :code
       ]
       [
@@ -111,8 +95,32 @@
         :scene
       ]
       [
+        "/game resources/images/player_ship.atlas"
+        :scene
+      ]
+      [
+        "/game resources/images/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/Aseprite/Main Ship - Base - Damaged.aseprite"
+        :code
+      ]
+      [
         "/main/main_menu.gui"
         :scene
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/assets.atlas"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
+        :code
       ]
     ]
   }

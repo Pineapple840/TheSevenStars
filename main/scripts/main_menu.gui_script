@@ -63,17 +63,30 @@ function on_input(self, action_id, action)
 			selection_counter = selection_counter - 1
 		end
 			
-		local temp_selection_counter = (selection_counter % 5) + 1
+		selection_counter = selection_counter % 5
 
 	
 		gui.set_position(self.left_selection_arrows,
-		vmath.vector3(left_selection_arrows_positions[temp_selection_counter][1], left_selection_arrows_positions[temp_selection_counter][2], 0))
+		vmath.vector3(left_selection_arrows_positions[selection_counter + 1][1], left_selection_arrows_positions[selection_counter + 1][2], 0))
 			
 		gui.set_position(self.right_selection_arrows,
-		vmath.vector3(right_selection_arrows_positions[temp_selection_counter][1], right_selection_arrows_positions[temp_selection_counter][2], 0))
+		vmath.vector3(right_selection_arrows_positions[selection_counter + 1][1], right_selection_arrows_positions[selection_counter + 1][2], 0))
 	end
 
-	if (action_id == hash("space") and action.pressed and main_menu_active == true then
-		print("hello world!!!1111")
+	if action_id == hash("space") and action.pressed and main_menu_active == true then
+		print("space pressed")
+		print("counter = " .. tostring(selection_counter))
+		if selection_counter == 0 then
+			msg.post("/gui", "disable")		
+		end
+		if selection_counter == 1 then			
+		end
+		if selection_counter == 2 then			
+		end
+		if selection_counter == 3 then			
+		end
+		if selection_counter == 4 then
+			sys.exit(0)			
+		end
 	end
 end
