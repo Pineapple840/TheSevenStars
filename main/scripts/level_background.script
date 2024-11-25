@@ -2,17 +2,11 @@ local enabled = false
 
 function update(self, dt)
 	
-	if enabled == false then 
-		return 
-	end
-	
-	local pos = go.get_position()
-	pos.y = pos.y - 0.2
-	go.set_position(pos)
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("enable") then
 		enabled = true
+		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, -360, go.EASING_INOUTSINE, 60)
 	end
 end

@@ -103,19 +103,11 @@
         :scene
       ]
       [
-        "/main/main.collection"
-        :scene
-      ]
-      [
         "/game resources/images/level_backgrounds.atlas"
         :scene
       ]
       [
         "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/level_background.script"
         :code
       ]
       [
@@ -132,6 +124,14 @@
       ]
       [
         "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/level_background.script"
         :code
       ]
     ]
