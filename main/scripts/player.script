@@ -8,6 +8,9 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("enable") then
 		enabled = true
 	end
+	if message_id == hash("contact_point_response") then
+		go.set_position(go.get_position() + message.normal * message.distance)
+	end
 end
 
 function on_input(self, action_id, action)
@@ -15,23 +18,21 @@ function on_input(self, action_id, action)
 	if enabled == false then 
 		return 
 	end
+
+	local pos = go.get_position()
 	
 	if action_id == hash("left") then
-		local pos = go.get_position()
 		pos.x = pos.x - 5
 		go.set_position(pos)
 	elseif action_id == hash("right") then
-		local pos = go.get_position()
 		pos.x = pos.x + 5
 		go.set_position(pos)
 	end
 	
 	if action_id == hash("down") then
-		local pos = go.get_position()
 		pos.y = pos.y - 5
 		go.set_position(pos)
 	elseif action_id == hash("up") then
-		local pos = go.get_position()
 		pos.y = pos.y + 5
 		go.set_position(pos)
 	end

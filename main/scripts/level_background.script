@@ -7,6 +7,7 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("enable") then
 		enabled = true
-		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, -360, go.EASING_INOUTSINE, 60)
+		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, -1000, go.EASING_INOUTSINE, 120)
 	end
+	
 end
