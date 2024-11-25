@@ -1,0 +1,4 @@
+images {
+  image: "/game resources/images/level1.png"
+}
+extrude_borders: 2

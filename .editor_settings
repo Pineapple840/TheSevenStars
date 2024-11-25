@@ -95,10 +95,6 @@
         :scene
       ]
       [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
         "/main/assets.atlas"
         :scene
       ]
@@ -115,15 +111,7 @@
         :scene
       ]
       [
-        "/main/levels.collection"
-        :scene
-      ]
-      [
         "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/main_controller.script"
         :code
       ]
       [
@@ -132,6 +120,18 @@
       ]
       [
         "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/levels.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
         :code
       ]
     ]
