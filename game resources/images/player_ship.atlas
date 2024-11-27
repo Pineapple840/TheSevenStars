@@ -94,4 +94,11 @@ images {
 images {
   image: "/game resources/images/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Weapons/PNGs/Main Ship - Weapons - Zapper.png"
 }
+animations {
+  id: "New Animation"
+  images {
+    image: "/game resources/images/Foozle_2DS0011_Void_MainShip/Main ship weapons/PNGs/Main ship weapon - Projectile - Auto cannon bullet.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
 extrude_borders: 2

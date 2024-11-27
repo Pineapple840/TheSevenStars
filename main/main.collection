@@ -1,4 +1,20 @@
 name: "main"
+instances {
+  id: "bullet"
+  prototype: "/main/bullet.go"
+  position {
+    x: 528.0
+    y: 287.0
+  }
+}
+instances {
+  id: "enemy"
+  prototype: "/main/enemy.go"
+  position {
+    x: 531.0
+    y: 391.0
+  }
+}
 collection_instances {
   id: "level_1"
   collection: "/main/level_1.collection"

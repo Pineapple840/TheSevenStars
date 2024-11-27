@@ -11,30 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/input/game.input_binding"
-        :cljfx-form-view
-      ]
-      [
-        "/builtins/render/default.render"
-        :cljfx-form-view
-      ]
-      [
-        "/player.script"
-        :code
-      ]
-      [
-        "/builtins/render/default.render_script"
-        :code
-      ]
-      [
-        "/main/camerascript.script"
-        :code
-      ]
-      [
-        "/main/fonts/connection_bitmap_0.tga"
-        :code
-      ]
-      [
         "/main/fonts/connection-serif.font"
         :scene
       ]
@@ -91,10 +67,6 @@
         :code
       ]
       [
-        "/game resources/images/player_ship.atlas"
-        :scene
-      ]
-      [
         "/main/assets.atlas"
         :scene
       ]
@@ -115,10 +87,6 @@
         :code
       ]
       [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
         "/game resources/images/level_backgrounds.atlas"
         :scene
       ]
@@ -132,6 +100,38 @@
       ]
       [
         "/main/level_1.collection"
+        :scene
+      ]
+      [
+        "/main/player_bullet.tilemap"
+        :scene
+      ]
+      [
+        "/main/game_images/player_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/enemy_sprites.atlas"
+        :scene
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/game resources/images/player_ship.atlas"
+        :scene
+      ]
+      [
+        "/main/enemy.go"
+        :scene
+      ]
+      [
+        "/main/bullet.go"
         :scene
       ]
       [

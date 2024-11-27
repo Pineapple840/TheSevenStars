@@ -16,6 +16,9 @@ embedded_instances {
   "  texture: \\\"/game resources/images/level_backgrounds.atlas\\\"\\n"
   "}\\n"
   "\"\n"
+  "  position {\n"
+  "    z: -19.0\n"
+  "  }\n"
   "}\n"
   ""
 }
