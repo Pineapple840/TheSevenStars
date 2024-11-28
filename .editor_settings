@@ -11,18 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/fonts/connection-serif.font"
-        :scene
-      ]
-      [
-        "/builtins/fonts/label-df.material"
-        :cljfx-form-view
-      ]
-      [
-        "/builtins/fonts/label.material"
-        :cljfx-form-view
-      ]
-      [
         "/main/fonts/connection_bitmap.font"
         :scene
       ]
@@ -55,10 +43,6 @@
         :scene
       ]
       [
-        "/game.project"
-        :cljfx-form-view
-      ]
-      [
         "/main/main_menu_upscaler.gui"
         :scene
       ]
@@ -83,20 +67,8 @@
         :scene
       ]
       [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
         "/game resources/images/level_backgrounds.atlas"
         :scene
-      ]
-      [
-        "/main/scripts/level_background.script"
-        :code
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
       ]
       [
         "/main/level_1.collection"
@@ -115,10 +87,6 @@
         :scene
       ]
       [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
         "/main/scripts/bullet.script"
         :code
       ]
@@ -135,8 +103,40 @@
         :scene
       ]
       [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/main.collection"
+        :text
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
         "/main/main.collection"
         :scene
+      ]
+      [
+        "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_background.script"
+        :code
       ]
     ]
   }

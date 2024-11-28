@@ -1,0 +1,12 @@
+function on_message(self, message_id, message, sender)
+	if message_id == hash("load_game") then
+		print("Loading level collection...")
+		msg.post("#level_collection_proxy", "load")
+	end
+	if message_id == hash("proxy_loaded") then
+		-- New world is loaded. Init and enable it.
+		print("Level collection loaded!")
+		msg.post(sender, "init")
+		msg.post(sender, "enable")
+	end
+end

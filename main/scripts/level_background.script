@@ -1,13 +1,5 @@
 local enabled = false
 
-function update(self, dt)
-	
-end
-
-function on_message(self, message_id, message, sender)
-	if message_id == hash("enable") then
-		enabled = true
-		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, -1000, go.EASING_INOUTSINE, 120)
-	end
-	
+function init(self)
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, -1000, go.EASING_INOUTSINE, 120)
 end
