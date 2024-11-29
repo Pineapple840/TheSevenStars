@@ -4,7 +4,7 @@ instances {
   prototype: "/main/game_objects/bullet.go"
   position {
     x: 512.0
-    y: 73.0
+    y: 292.0
   }
 }
 instances {
@@ -12,9 +12,20 @@ instances {
   prototype: "/main/game_objects/enemy.go"
   position {
     x: 512.0
-    y: 154.0
-    z: 10.0
+    y: 386.0
   }
+}
+instances {
+  id: "player"
+  prototype: "/main/game_objects/player.go"
+  position {
+    x: 512.0
+    y: 216.0
+  }
+}
+instances {
+  id: "player_wall"
+  prototype: "/main/game_objects/player_wall.go"
 }
 scale_along_z: 0
 embedded_instances {

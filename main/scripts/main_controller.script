@@ -4,12 +4,8 @@ local function start_game(self)
 	print("Game Started!")
 	msg.post("/game_loader", "load_game")
 	msg.post("/gui", "disable")
-	msg.post("player", "enable")
 end
 
-function init(self)
-	msg.post("player", "disable")
-end
 
 
 function on_message(self, message_id, message, sender)

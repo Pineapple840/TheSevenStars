@@ -11,30 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/fonts/connection_bitmap.font"
-        :scene
-      ]
-      [
-        "/builtins/fonts/label-fnt.material"
-        :cljfx-form-view
-      ]
-      [
-        "/builtins/fonts/font-df.material"
-        :cljfx-form-view
-      ]
-      [
-        "/builtins/fonts/font.material"
-        :cljfx-form-view
-      ]
-      [
-        "/builtins/fonts/font-fnt.material"
-        :cljfx-form-view
-      ]
-      [
-        "/game resources/fonts/connection_bitmap.font"
-        :scene
-      ]
-      [
         "/game resources/fonts/connection-serif.font"
         :scene
       ]
@@ -87,10 +63,6 @@
         :scene
       ]
       [
-        "/main/scripts/bullet.script"
-        :code
-      ]
-      [
         "/game resources/images/player_ship.atlas"
         :scene
       ]
@@ -103,24 +75,28 @@
         :scene
       ]
       [
-        "/game.project"
-        :cljfx-form-view
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
         "/main/main.collection"
         :text
       ]
       [
-        "/main/level.collection"
+        "/input/game.input_binding"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_background.script"
+        :code
+      ]
+      [
+        "/main/game_objects/enemy.go"
         :scene
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
       ]
       [
         "/main/main.collection"
@@ -131,11 +107,35 @@
         :code
       ]
       [
-        "/main/scripts/main_controller.script"
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/game_objects/player_wall.go"
+        :scene
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/camerascript.script"
         :code
       ]
       [
-        "/main/scripts/level_background.script"
+        "/main/game_objects/bullet.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/bullet.script"
         :code
       ]
     ]

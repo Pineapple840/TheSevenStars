@@ -19,3 +19,6 @@ width = 1024
 height = 576
 fullscreen = 0
 
+[sprite]
+max_count = 1024
+

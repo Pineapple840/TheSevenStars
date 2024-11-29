@@ -1,3 +1,10 @@
 function init(self)
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 500, go.EASING_LINEAR, 20)
+	local pos = go.get_position()
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y + 300, go.EASING_LINEAR, 1)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") and message.enter then
+		go.delete()
+	end
 end
