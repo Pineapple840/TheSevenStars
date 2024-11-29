@@ -91,18 +91,6 @@
         :scene
       ]
       [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/level.collection"
-        :scene
-      ]
-      [
         "/main/game_objects/player_wall.go"
         :scene
       ]
@@ -131,11 +119,23 @@
         :code
       ]
       [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
         "/main/scripts/bullet.script"
         :code
       ]
       [
-        "/main/scripts/player.script"
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy.script"
         :code
       ]
     ]

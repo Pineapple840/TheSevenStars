@@ -1,6 +1,8 @@
 function init(self)
 	local pos = go.get_position()
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y + 300, go.EASING_LINEAR, 1)
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y + 300, go.EASING_LINEAR, 1, 0, function()
+		go.delete()
+	end)
 end
 
 function on_message(self, message_id, message, sender)
