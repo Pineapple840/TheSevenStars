@@ -79,10 +79,6 @@
         :text
       ]
       [
-        "/input/game.input_binding"
-        :cljfx-form-view
-      ]
-      [
         "/main/scripts/main_controller.script"
         :code
       ]
@@ -103,20 +99,12 @@
         :scene
       ]
       [
-        "/main/scripts/game_loader.script"
-        :code
-      ]
-      [
         "/main/level.collection"
         :scene
       ]
       [
         "/main/game_objects/player_wall.go"
         :scene
-      ]
-      [
-        "/game.project"
-        :cljfx-form-view
       ]
       [
         "/main/scripts/camerascript.script"
@@ -131,11 +119,23 @@
         :scene
       ]
       [
-        "/main/scripts/player.script"
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/input/game.input_binding"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/game_loader.script"
         :code
       ]
       [
         "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
         :code
       ]
     ]
