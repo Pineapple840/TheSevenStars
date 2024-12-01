@@ -11,14 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/game resources/fonts/connection-serif.font"
-        :scene
-      ]
-      [
-        "/game resources/images/black.atlas"
-        :scene
-      ]
-      [
         "/main/main_menu_upscaler.gui"
         :scene
       ]
@@ -33,10 +25,6 @@
       [
         "/main/main_menu.gui"
         :scene
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
-        :code
       ]
       [
         "/main/levels.collection"
@@ -79,10 +67,6 @@
         :text
       ]
       [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
         "/main/scripts/level_background.script"
         :code
       ]
@@ -111,19 +95,27 @@
         :cljfx-form-view
       ]
       [
+        "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/game_objects/pause_operator.go"
+        :scene
+      ]
+      [
         "/input/game.input_binding"
         :cljfx-form-view
       ]
       [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
         "/main/scripts/game_loader.script"
-        :code
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/scripts/bullet.script"
         :code
       ]
       [
@@ -131,11 +123,19 @@
         :scene
       ]
       [
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
         "/main/level.collection"
         :scene
       ]
       [
-        "/main/scripts/enemy.script"
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
         :code
       ]
     ]
