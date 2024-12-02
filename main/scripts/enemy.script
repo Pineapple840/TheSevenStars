@@ -1,14 +1,18 @@
-local health = 2000
+go.property("health", 2000)
 
-local function take_damage()
-	health = health - 10
-	if health < 0 then
+local function take_damage(self)
+	self.health = self.health - 10
+	if self.health < 0 then
 		go.delete()
 	end
 end
 
+function init(self)
+	print("enemy spawned")
+end
+
 function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") and message.enter then
-		take_damage()
+		take_damage(self)
 	end
 end

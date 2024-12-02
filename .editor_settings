@@ -19,10 +19,6 @@
         :code
       ]
       [
-        "/main/assets.atlas"
-        :scene
-      ]
-      [
         "/main/main_menu.gui"
         :scene
       ]
@@ -44,10 +40,6 @@
       ]
       [
         "/main/game_images/player_bullets.tilesource"
-        :scene
-      ]
-      [
-        "/main/enemy_sprites.atlas"
         :scene
       ]
       [
@@ -79,10 +71,6 @@
         :scene
       ]
       [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
         "/main/game_objects/bullet.go"
         :scene
       ]
@@ -96,10 +84,6 @@
       ]
       [
         "/main/scripts/bullet.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy.script"
         :code
       ]
       [
@@ -119,24 +103,40 @@
         :code
       ]
       [
-        "/main/main.collection"
-        :scene
-      ]
-      [
         "/main/scripts/main_menu.gui_script"
         :code
       ]
       [
-        "/main/level.collection"
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/assets.atlas"
         :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/enemy_sprites.atlas"
+        :scene
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
       ]
       [
         "/main/scripts/player.script"
         :code
       ]
       [
-        "/main/scripts/pause.script"
+        "/main/scripts/enemy.script"
         :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
       ]
     ]
   }
