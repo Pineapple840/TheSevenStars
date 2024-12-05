@@ -1,20 +1,43 @@
 local paused = false
+local can_pause = false
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
 end
 
+local function pause()
+	print("pause function run")
+	msg.post("#level_collection_proxy", "set_time_step", {factor = 0, mode = 1})
+	msg.post("level:/player#player", "stop_input")
+	msg.post("main:/pause_menu", "enable")
+	paused = true
+end
+
+local function unpause()
+	print("unpause function run")
+	msg.post("#level_collection_proxy", "set_time_step", {factor = 1, mode = 1})
+	msg.post("level:/player#player", "start_input")
+	msg.post("main:/pause_menu", "disable")
+	paused = false
+end
+
 
 function on_input(self, action_id, action)
-	if action_id == hash("esc") and action.pressed then
+	if action_id == hash("esc") and action.pressed == true and can_pause == true then
 		if paused == false then
-			msg.post("#level_collection_proxy", "set_time_step", {factor = 0, mode = 1})
-			msg.post("level:/player#player", "stop_input")
-			paused = true
+			pause()
 		else
-			msg.post("#level_collection_proxy", "set_time_step", {factor = 1, mode = 1})
-			msg.post("level:/player#player", "start_input")
-			paused = false
+			unpause()
 		end
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("unpause") then
+		unpause()
+	end
+	if message_id == hash("enable_pause") then
+		can_pause = true
+		print("player can pause")
 	end
 end

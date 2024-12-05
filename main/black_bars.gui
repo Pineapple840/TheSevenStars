@@ -1,0 +1,103 @@
+nodes {
+  position {
+    y: 230.0
+  }
+  scale {
+    x: 3.974188
+    y: 19.554014
+    z: 0.92
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "box"
+  pivot: PIVOT_E
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 1024.0
+    y: 230.0
+  }
+  rotation {
+    x: 5.0
+  }
+  scale {
+    x: 3.974188
+    y: 19.621132
+    z: 0.92
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "box1"
+  pivot: PIVOT_W
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 516.0
+  }
+  scale {
+    x: 5.212022
+    y: 7.498216
+    z: 0.92
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "box2"
+  pivot: PIVOT_N
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 516.0
+    y: 576.0
+  }
+  scale {
+    x: 5.212022
+    y: 6.375204
+    z: 0.92
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "box3"
+  pivot: PIVOT_S
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

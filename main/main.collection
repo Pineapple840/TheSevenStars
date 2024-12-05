@@ -58,3 +58,19 @@ embedded_instances {
   "}\n"
   ""
 }
+embedded_instances {
+  id: "black_bars"
+  data: "components {\n"
+  "  id: \"black_bars\"\n"
+  "  component: \"/main/black_bars.gui\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "pause_menu"
+  data: "components {\n"
+  "  id: \"pause_menu\"\n"
+  "  component: \"/main/pause_menu.gui\"\n"
+  "}\n"
+  ""
+}

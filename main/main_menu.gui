@@ -57,8 +57,8 @@ nodes {
     y: 288.0
   }
   scale {
-    x: 7.0
-    y: 3.0
+    x: 6.841379
+    y: 2.893019
   }
   type: TYPE_BOX
   texture: "black/black"

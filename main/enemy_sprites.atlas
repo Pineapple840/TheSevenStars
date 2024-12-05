@@ -23,13 +23,7 @@ images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Base/PNGs/Kla\'ed - Torpedo Ship - Base.png"
 }
 images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Battlecruiser - Destruction.png"
-}
-images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Bomber - Destruction.png"
-}
-images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Dreadnought - Destruction.png"
 }
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Fighter - Destruction.png"
@@ -47,13 +41,7 @@ images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Torpedo Ship - Destruction.png"
 }
 images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Engine/PNGs/Kla\'ed - Battlecruiser - Engine.png"
-}
-images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Engine/PNGs/Kla\'ed - Bomber - Engine.png"
-}
-images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Engine/PNGs/Kla\'ed - Dreadnought - Engine.png"
 }
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Engine/PNGs/Kla\'ed - Fighter - Engine.png"
@@ -86,31 +74,16 @@ images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Projectiles/PNGs/Kla\'ed - Wave.png"
 }
 images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Battlecruiser - Shield.png"
-}
-images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Bomber - Shield.png"
 }
 images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Dreadnought - Shield.png"
-}
-images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Fighter - Shield.png"
-}
-images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Frigate - Shield.png"
 }
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Scout - Shield.png"
 }
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Shield/PNGs/Kla\'ed - Torpedo Ship - Shield.png"
-}
-images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Weapons/PNGs/Kla\'ed - Battlecruiser - Weapons.png"
-}
-images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Weapons/PNGs/Kla\'ed - Dreadnought - Weapons.png"
 }
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Weapons/PNGs/Kla\'ed - Fighter - Weapons.png"
@@ -120,8 +93,5 @@ images {
 }
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Weapons/PNGs/Kla\'ed - Scout - Weapons.png"
-}
-images {
-  image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Weapons/PNGs/Kla\'ed - Torpedo Ship - Weapons.png"
 }
 extrude_borders: 2

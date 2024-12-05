@@ -11,35 +11,7 @@
   :workflow {
     :recent-files [
       [
-        "/main/main_menu_upscaler.gui"
-        :scene
-      ]
-      [
-        "/game resources/images/Foozle_2DS0011_Void_MainShip/Main Ship/Main Ship - Bases/Aseprite/Main Ship - Base - Damaged.aseprite"
-        :code
-      ]
-      [
-        "/main/main_menu.gui"
-        :scene
-      ]
-      [
-        "/main/levels.collection"
-        :scene
-      ]
-      [
-        "/game resources/images/level_backgrounds.atlas"
-        :scene
-      ]
-      [
-        "/main/level_1.collection"
-        :scene
-      ]
-      [
         "/main/player_bullet.tilemap"
-        :scene
-      ]
-      [
-        "/main/game_images/player_bullets.tilesource"
         :scene
       ]
       [
@@ -79,10 +51,6 @@
         :scene
       ]
       [
-        "/game.project"
-        :cljfx-form-view
-      ]
-      [
         "/main/scripts/bullet.script"
         :code
       ]
@@ -91,8 +59,76 @@
         :scene
       ]
       [
+        "/main/assets.atlas"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/game_images/player_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/game resources/images/black.atlas"
+        :scene
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/black_bars.gui"
+        :scene
+      ]
+      [
         "/input/game.input_binding"
         :cljfx-form-view
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/pause_menu.gui"
+        :scene
+      ]
+      [
+        "/main/main_menu.gui"
+        :scene
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/enemy_sprites.atlas"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
+        :code
       ]
       [
         "/main/scripts/main_controller.script"
@@ -101,42 +137,6 @@
       [
         "/main/scripts/game_loader.script"
         :code
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/pause.script"
-        :code
-      ]
-      [
-        "/main/assets.atlas"
-        :scene
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/enemy_sprites.atlas"
-        :scene
-      ]
-      [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
-        "/main/level.collection"
-        :scene
       ]
     ]
   }
