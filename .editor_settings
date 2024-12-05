@@ -103,10 +103,6 @@
         :scene
       ]
       [
-        "/main/main_menu.gui"
-        :scene
-      ]
-      [
         "/main/level.collection"
         :scene
       ]
@@ -127,15 +123,19 @@
         :scene
       ]
       [
-        "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
         "/main/scripts/main_controller.script"
         :code
       ]
       [
         "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/main_menu.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
         :code
       ]
     ]
