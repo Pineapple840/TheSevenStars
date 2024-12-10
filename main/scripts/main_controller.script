@@ -17,7 +17,7 @@ function on_message(self, message_id, message, sender)
 		start_game(self)
 	end
 	if message_id == hash("exit_to_menu") then
-		msg.post("/game_loader#game_loader", "unloaddd")
+		msg.post("/game_loader#game_loader", "unload_game")
 		msg.post("/pause_menu#pause_menu", "disable")
 		msg.post("/gui#main_menu", "load_menu")
 	end

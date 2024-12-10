@@ -11,14 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/player_bullet.tilemap"
-        :scene
-      ]
-      [
-        "/game resources/images/player_ship.atlas"
-        :scene
-      ]
-      [
         "/main/enemy.go"
         :scene
       ]
@@ -29,10 +21,6 @@
       [
         "/main/main.collection"
         :text
-      ]
-      [
-        "/main/scripts/level_background.script"
-        :code
       ]
       [
         "/main/game_objects/enemy.go"
@@ -47,14 +35,6 @@
         :scene
       ]
       [
-        "/main/game_objects/player.go"
-        :scene
-      ]
-      [
-        "/main/scripts/bullet.script"
-        :code
-      ]
-      [
         "/main/game_objects/pause_operator.go"
         :scene
       ]
@@ -67,28 +47,12 @@
         :code
       ]
       [
-        "/main/game_images/player_bullets.tilesource"
-        :scene
-      ]
-      [
         "/game resources/images/black.atlas"
-        :scene
-      ]
-      [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
-        "/main/black_bars.gui"
         :scene
       ]
       [
         "/input/game.input_binding"
         :cljfx-form-view
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
       ]
       [
         "/game.project"
@@ -107,14 +71,6 @@
         :scene
       ]
       [
-        "/main/level.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/pause.script"
-        :code
-      ]
-      [
         "/main/scripts/pause_menu.gui_script"
         :code
       ]
@@ -123,11 +79,43 @@
         :scene
       ]
       [
-        "/main/main.collection"
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/player_bullet.tilemap"
         :scene
       ]
       [
-        "/main/scripts/main_menu.gui_script"
+        "/main/black_bars.gui"
+        :scene
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_background.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
         :code
       ]
       [
@@ -135,8 +123,20 @@
         :code
       ]
       [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
         "/main/scripts/game_loader.script"
         :code
+      ]
+      [
+        "/main/game_images/player_bullets.tilesource"
+        :scene
       ]
     ]
   }

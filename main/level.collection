@@ -75,3 +75,17 @@ embedded_instances {
     z: -20.0
   }
 }
+embedded_instances {
+  id: "level_1_controller"
+  data: "components {\n"
+  "  id: \"level_1\"\n"
+  "  component: \"/main/scripts/level_1.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"player_spawner\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/player.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

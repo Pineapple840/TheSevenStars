@@ -1,0 +1,3 @@
+function init(self)
+	factory.create("#player_spawner", vmath.vector3(512, 216, 0))
+end

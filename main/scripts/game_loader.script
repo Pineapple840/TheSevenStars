@@ -5,6 +5,7 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("load_game") then
 		print("Loading level collection...")
+		msg.post(""/loading_indicator, message_id)
 		msg.post("#level_collection_proxy", "async_load")
 	end
 	if message_id == hash("proxy_loaded") then
@@ -12,9 +13,11 @@ function on_message(self, message_id, message, sender)
 		print("Level collection loaded!")
 		msg.post(sender, "enable")
 	end
-	if message_id == hash("unloaddd") then
-		-- New world is loaded. Init and enable it.
+	if message_id == hash("unload_game") then
+		-- Game is unloaded
 		print("Unloading level collection...")
-		sys.reboot()
+		msg.post("#level_collection_proxy", "disable")
+		msg.post("#level_collection_proxy", "final")
+		msg.post("#level_collection_proxy", "unload")
 	end
 end
