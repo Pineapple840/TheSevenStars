@@ -1,25 +1,31 @@
-local input_enabled = true
+local input_enabled = false
 local move_speed = 6
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	
-	timer.delay(0.1, true, function()
-		local pos = go.get_position()
-		factory.create("#bullet_producer", vmath.vector3(pos.x + 6, pos.y + 8, pos.z))
-		factory.create("#bullet_producer", vmath.vector3(pos.x - 4, pos.y + 2 , pos.z))
-		factory.create("#bullet_producer", vmath.vector3(pos.x + 16, pos.y + 2, pos.z))
-		
+
+	local pos = go.get_position()
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 216, go.EASING_LINEAR, 5, 0, function()
+		input_enabled = true
+		timer.delay(0.1, true, function()
+			local pos = go.get_position()
+			factory.create("#bullet_producer", vmath.vector3(pos.x + 6, pos.y + 8, pos.z))
+			factory.create("#bullet_producer", vmath.vector3(pos.x - 4, pos.y + 2 , pos.z))
+			factory.create("#bullet_producer", vmath.vector3(pos.x + 16, pos.y + 2, pos.z))
+
+		end)
 	end)
+	
+
 	
 	print("Player initialised")
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("enable") then
-		enabled = true
+		input_enabled = true
 	end
-	if message_id == hash("contact_point_response") then
+	if message_id == hash("contact_point_response") and input_enabled == true then
 		go.set_position(go.get_position() + message.normal * message.distance)
 	end
 	if message_id == hash("stop_input") then

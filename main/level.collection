@@ -1,26 +1,10 @@
 name: "level"
 instances {
-  id: "bullet"
-  prototype: "/main/game_objects/bullet.go"
-  position {
-    x: 512.0
-    y: 292.0
-  }
-}
-instances {
   id: "enemy"
   prototype: "/main/game_objects/enemy.go"
   position {
     x: 512.0
     y: 386.0
-  }
-}
-instances {
-  id: "player"
-  prototype: "/main/game_objects/player.go"
-  position {
-    x: 512.0
-    y: 216.0
   }
 }
 instances {

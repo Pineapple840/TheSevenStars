@@ -76,25 +76,9 @@ embedded_instances {
 }
 embedded_instances {
   id: "loading_indicator"
-  data: "embedded_components {\n"
-  "  id: \"label\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 128.0\\n"
-  "  y: 32.0\\n"
-  "}\\n"
-  "text: \\\"Loading...\\\"\\n"
-  "font: \\\"/game resources/fonts/connection_bitmap.font\\\"\\n"
-  "material: \\\"/builtins/fonts/label-df.material\\\"\\n"
-  "\"\n"
-  "  scale {\n"
-  "    x: 2.0\n"
-  "    y: 2.0\n"
-  "  }\n"
+  data: "components {\n"
+  "  id: \"loading_indicator\"\n"
+  "  component: \"/main/loading_indicator.gui\"\n"
   "}\n"
   ""
-  position {
-    x: 889.0
-    y: 58.0
-  }
 }

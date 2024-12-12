@@ -3,12 +3,13 @@
 
 local function start_game(self)
 	print("Game Started!")
-	msg.post("/game_loader", "load_game")
 	msg.post("/gui", "disable")
+	msg.post("/game_loader", "load_game")
 	msg.post("/game_loader#pause", "enable_pause")
 end
 
 function init(self)
+	msg.post("/loading_indicator", "disable")
 	msg.post("/pause_menu", "disable")
 end
 
