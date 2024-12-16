@@ -19,10 +19,6 @@
         :text
       ]
       [
-        "/main/game_objects/enemy.go"
-        :scene
-      ]
-      [
         "/main/game_objects/player_wall.go"
         :scene
       ]
@@ -37,10 +33,6 @@
       [
         "/main/assets.atlas"
         :scene
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
       ]
       [
         "/game resources/images/black.atlas"
@@ -79,19 +71,7 @@
         :scene
       ]
       [
-        "/main/game_objects/player.go"
-        :scene
-      ]
-      [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
         "/main/scripts/level_background.script"
-        :code
-      ]
-      [
-        "/main/scripts/pause.script"
         :code
       ]
       [
@@ -107,19 +87,7 @@
         :scene
       ]
       [
-        "/main/main.collection"
-        :scene
-      ]
-      [
         "/main/scripts/bullet.script"
-        :code
-      ]
-      [
-        "/main/scripts/level_1.script"
-        :code
-      ]
-      [
-        "/main/scripts/game_loader.script"
         :code
       ]
       [
@@ -127,16 +95,48 @@
         :code
       ]
       [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
         "/main/loading_indicator.gui"
         :scene
       ]
       [
+        "/main/game_objects/enemy.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
         "/main/level.collection"
         :scene
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
       ]
     ]
   }

@@ -1,4 +1,4 @@
-go.property("health", 2000)
+go.property("health", 200)
 
 local function take_damage(self)
 	self.health = self.health - 10
@@ -15,4 +15,10 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") and message.enter then
 		take_damage(self)
 	end
+end
+
+function update(self, dt)
+	local pos = go.get_position()
+	pos.y = pos.y - 1.5
+	go.set_position(pos)
 end

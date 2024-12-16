@@ -1,31 +1,7 @@
 name: "level"
 instances {
-  id: "enemy"
-  prototype: "/main/game_objects/enemy.go"
-  position {
-    x: 512.0
-    y: 386.0
-  }
-}
-instances {
   id: "player_wall"
   prototype: "/main/game_objects/player_wall.go"
-}
-instances {
-  id: "enemy1"
-  prototype: "/main/game_objects/enemy.go"
-  position {
-    x: 590.0
-    y: 386.0
-  }
-}
-instances {
-  id: "enemy2"
-  prototype: "/main/game_objects/enemy.go"
-  position {
-    x: 399.0
-    y: 386.0
-  }
 }
 scale_along_z: 0
 embedded_instances {
@@ -69,6 +45,12 @@ embedded_instances {
   "  id: \"player_spawner\"\n"
   "  type: \"factory\"\n"
   "  data: \"prototype: \\\"/main/game_objects/player.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"enemy1_spawner\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/enemy.go\\\"\\n"
   "\"\n"
   "}\n"
   ""
