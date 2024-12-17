@@ -7,16 +7,16 @@ end
 
 local function pause()
 	print("pause function run")
-	msg.post("#level_collection_proxy", "set_time_step", {factor = 0, mode = 1})
-	msg.post("level:/player#player", "stop_input")
+	msg.post("#level_collection_proxy", "set_time_step", {factor = 0, mode = 0})
+	msg.post("level:/level_1_controller#level_1", "stop_input")
 	msg.post("main:/pause_menu", "enable")
 	paused = true
 end
 
 local function unpause()
 	print("unpause function run")
-	msg.post("#level_collection_proxy", "set_time_step", {factor = 1, mode = 1})
-	msg.post("level:/player#player", "start_input")
+	msg.post("#level_collection_proxy", "set_time_step", {factor = 1, mode = 0})
+	msg.post("level:/level_1_controller#level_1", "start_input")
 	msg.post("main:/pause_menu", "disable")
 	paused = false
 end

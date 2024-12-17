@@ -1,10 +1,5 @@
-local function spawn_player(self)
-	local player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
-end
-
 function init(self)
-	local player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
-	msg.post(".", "stop_input", {arg = player})
+	self.player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
 	timer.delay(5, false, function()
 		factory.create("#enemy1_spawner", vmath.vector3(300, 440, 0))
 		factory.create("#enemy1_spawner", vmath.vector3(300, 480, 0))
@@ -19,9 +14,9 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("stop_input") then
-		msg.post(arg, "stop_input")
+		msg.post(self.player, "stop_input")
 	end
 	if message_id == hash("start_input") then
-		input_enabled = true
+		msg.post(self.player, "start_input")
 	end
 end

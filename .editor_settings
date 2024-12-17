@@ -99,20 +99,12 @@
         :scene
       ]
       [
-        "/main/game_objects/enemy.go"
-        :scene
-      ]
-      [
         "/main/game_objects/player.go"
         :scene
       ]
       [
         "/main/main.collection"
         :scene
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
       ]
       [
         "/main/scripts/game_loader.script"
@@ -123,19 +115,27 @@
         :code
       ]
       [
+        "/main/level.collection"
+        :scene
+      ]
+      [
         "/main/scripts/player.script"
         :code
+      ]
+      [
+        "/main/game_objects/enemy.go"
+        :scene
       ]
       [
         "/main/scripts/pause.script"
         :code
       ]
       [
-        "/main/level.collection"
-        :scene
+        "/main/scripts/level_1.script"
+        :code
       ]
       [
-        "/main/scripts/level_1.script"
+        "/main/scripts/enemy.script"
         :code
       ]
     ]
