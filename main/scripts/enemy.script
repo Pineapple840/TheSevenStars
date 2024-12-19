@@ -2,23 +2,22 @@ go.property("health", 200)
 
 local function take_damage(self)
 	self.health = self.health - 10
-	if self.health < 0 then
+	if self.health <= 0 then
+		factory.create("/level_1_controller#enemy_killer")
 		go.delete()
 	end
 end
 
 function init(self)
 	print("enemy spawned")
+	self.pos = go.get_position()
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos.y - 300, go.EASING_LINEAR, 4, 0, function()
+		go.delete()
+	end)
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") and message.enter then
 		take_damage(self)
 	end
-end
-
-function update(self, dt)
-	local pos = go.get_position()
-	pos.y = pos.y - 1.5
-	go.set_position(pos)
 end

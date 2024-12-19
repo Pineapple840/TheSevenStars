@@ -25,16 +25,23 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("enable") then
 		input_enabled = true
 	end
+	
 	if message_id == hash("contact_point_response") and input_enabled == true then
 		go.set_position(go.get_position() + message.normal * message.distance)
 	end
+	
 	if message_id == hash("stop_input") then
 		print("input has been stopped")
 		input_enabled = false
 	end
+	
 	if message_id == hash("start_input") then
 		print("input has been started")
 		input_enabled = true
+	end
+	
+	if message_id == hash("collision_response") then
+		print("collisino")
 	end
 end
 

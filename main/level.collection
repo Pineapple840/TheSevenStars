@@ -53,5 +53,11 @@ embedded_instances {
   "  data: \"prototype: \\\"/main/game_objects/enemy.go\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"enemy_killer\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/enemy1_death.go\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }

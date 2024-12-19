@@ -94,4 +94,12 @@ images {
 images {
   image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Weapons/PNGs/Kla\'ed - Scout - Weapons.png"
 }
+animations {
+  id: "enemy_1_death"
+  playback: PLAYBACK_LOOP_FORWARD
+}
+animations {
+  id: "New Animation"
+  playback: PLAYBACK_LOOP_FORWARD
+}
 extrude_borders: 2

@@ -1,0 +1,6 @@
+function init(self)
+	print("enemy has died")
+	sprite.play_flipbook("#sprite", "anim", function()
+		go.delete()
+	end)
+end

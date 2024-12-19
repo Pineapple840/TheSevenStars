@@ -11,30 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/bullet.go"
-        :scene
-      ]
-      [
-        "/main/main.collection"
-        :text
-      ]
-      [
-        "/main/game_objects/player_wall.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/bullet.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/pause_operator.go"
-        :scene
-      ]
-      [
-        "/main/assets.atlas"
-        :scene
-      ]
-      [
         "/game resources/images/black.atlas"
         :scene
       ]
@@ -55,10 +31,6 @@
         :code
       ]
       [
-        "/main/enemy_sprites.atlas"
-        :scene
-      ]
-      [
         "/main/scripts/main_menu.gui_script"
         :code
       ]
@@ -75,10 +47,6 @@
         :code
       ]
       [
-        "/main/game_images/player_bullets.tilesource"
-        :scene
-      ]
-      [
         "/main/main_menu.gui"
         :scene
       ]
@@ -87,19 +55,11 @@
         :scene
       ]
       [
-        "/main/scripts/bullet.script"
-        :code
-      ]
-      [
         "/main/scripts/main_controller.script"
         :code
       ]
       [
         "/main/loading_indicator.gui"
-        :scene
-      ]
-      [
-        "/main/game_objects/player.go"
         :scene
       ]
       [
@@ -111,24 +71,48 @@
         :code
       ]
       [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/game_images/player_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/assets.atlas"
+        :scene
+      ]
+      [
+        "/main/enemy_sprites.atlas"
+        :scene
+      ]
+      [
         "/main/scripts/camerascript.script"
         :code
       ]
       [
-        "/main/level.collection"
+        "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Destruction/Aseprite/Kla'ed - Scout - Destruction.aseprite"
+        :code
+      ]
+      [
+        "/main/game_images/enemy_1_death.tilesource"
         :scene
       ]
       [
-        "/main/scripts/player.script"
+        "/main/scripts/bullet.script"
         :code
+      ]
+      [
+        "/main/game_objects/bullet.go"
+        :scene
       ]
       [
         "/main/game_objects/enemy.go"
         :scene
       ]
       [
-        "/main/scripts/pause.script"
-        :code
+        "/main/game_objects/enemy1_death.go"
+        :scene
       ]
       [
         "/main/scripts/level_1.script"
@@ -137,6 +121,22 @@
       [
         "/main/scripts/enemy.script"
         :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy_death.script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
       ]
     ]
   }
