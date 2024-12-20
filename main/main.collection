@@ -74,3 +74,11 @@ embedded_instances {
   "}\n"
   ""
 }
+embedded_instances {
+  id: "loading_indicator"
+  data: "components {\n"
+  "  id: \"loading_indicator\"\n"
+  "  component: \"/main/loading_indicator.gui\"\n"
+  "}\n"
+  ""
+}

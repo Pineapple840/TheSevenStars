@@ -11,75 +11,7 @@
   :workflow {
     :recent-files [
       [
-        "/main/player_bullet.tilemap"
-        :scene
-      ]
-      [
-        "/game resources/images/player_ship.atlas"
-        :scene
-      ]
-      [
-        "/main/enemy.go"
-        :scene
-      ]
-      [
-        "/main/bullet.go"
-        :scene
-      ]
-      [
-        "/main/main.collection"
-        :text
-      ]
-      [
-        "/main/scripts/level_background.script"
-        :code
-      ]
-      [
-        "/main/game_objects/enemy.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/player_wall.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/bullet.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/player.go"
-        :scene
-      ]
-      [
-        "/main/scripts/bullet.script"
-        :code
-      ]
-      [
-        "/main/game_objects/pause_operator.go"
-        :scene
-      ]
-      [
-        "/main/assets.atlas"
-        :scene
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
-        "/main/game_images/player_bullets.tilesource"
-        :scene
-      ]
-      [
         "/game resources/images/black.atlas"
-        :scene
-      ]
-      [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
-        "/main/black_bars.gui"
         :scene
       ]
       [
@@ -87,16 +19,8 @@
         :cljfx-form-view
       ]
       [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
         "/game.project"
         :cljfx-form-view
-      ]
-      [
-        "/main/hud.gui"
-        :scene
       ]
       [
         "/main/pause_menu.gui"
@@ -115,19 +39,19 @@
         :code
       ]
       [
-        "/main/enemy_sprites.atlas"
-        :scene
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/main_controller.script"
+        "/main/scripts/main_menu.gui_script"
         :code
       ]
       [
-        "/main/scripts/game_loader.script"
+        "/main/player_bullet.tilemap"
+        :scene
+      ]
+      [
+        "/main/black_bars.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/level_background.script"
         :code
       ]
       [
@@ -135,8 +59,92 @@
         :scene
       ]
       [
-        "/main/scripts/main_menu.gui_script"
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/main_controller.script"
         :code
+      ]
+      [
+        "/main/loading_indicator.gui"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/game_images/player_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/assets.atlas"
+        :scene
+      ]
+      [
+        "/main/enemy_sprites.atlas"
+        :scene
+      ]
+      [
+        "/main/scripts/camerascript.script"
+        :code
+      ]
+      [
+        "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Destruction/Aseprite/Kla'ed - Scout - Destruction.aseprite"
+        :code
+      ]
+      [
+        "/main/game_images/enemy_1_death.tilesource"
+        :scene
+      ]
+      [
+        "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/main/game_objects/bullet.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy1_death.go"
+        :scene
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy_death.script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
       ]
     ]
   }

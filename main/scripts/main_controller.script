@@ -3,12 +3,13 @@
 
 local function start_game(self)
 	print("Game Started!")
-	msg.post("/game_loader", "load_game")
 	msg.post("/gui", "disable")
+	msg.post("/game_loader", "load_game")
 	msg.post("/game_loader#pause", "enable_pause")
 end
 
 function init(self)
+	msg.post("/loading_indicator", "disable")
 	msg.post("/pause_menu", "disable")
 end
 
@@ -17,7 +18,7 @@ function on_message(self, message_id, message, sender)
 		start_game(self)
 	end
 	if message_id == hash("exit_to_menu") then
-		msg.post("/game_loader#game_loader", "unloaddd")
+		msg.post("/game_loader#game_loader", "unload_game")
 		msg.post("/pause_menu#pause_menu", "disable")
 		msg.post("/gui#main_menu", "load_menu")
 	end

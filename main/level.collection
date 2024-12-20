@@ -1,47 +1,7 @@
 name: "level"
 instances {
-  id: "bullet"
-  prototype: "/main/game_objects/bullet.go"
-  position {
-    x: 512.0
-    y: 292.0
-  }
-}
-instances {
-  id: "enemy"
-  prototype: "/main/game_objects/enemy.go"
-  position {
-    x: 512.0
-    y: 386.0
-  }
-}
-instances {
-  id: "player"
-  prototype: "/main/game_objects/player.go"
-  position {
-    x: 512.0
-    y: 216.0
-  }
-}
-instances {
   id: "player_wall"
   prototype: "/main/game_objects/player_wall.go"
-}
-instances {
-  id: "enemy1"
-  prototype: "/main/game_objects/enemy.go"
-  position {
-    x: 590.0
-    y: 386.0
-  }
-}
-instances {
-  id: "enemy2"
-  prototype: "/main/game_objects/enemy.go"
-  position {
-    x: 399.0
-    y: 386.0
-  }
 }
 scale_along_z: 0
 embedded_instances {
@@ -74,4 +34,30 @@ embedded_instances {
     y: 1644.0
     z: -20.0
   }
+}
+embedded_instances {
+  id: "level_1_controller"
+  data: "components {\n"
+  "  id: \"level_1\"\n"
+  "  component: \"/main/scripts/level_1.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"player_spawner\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/player.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"enemy1_spawner\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/enemy.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"enemy_killer\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/enemy1_death.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
 }
