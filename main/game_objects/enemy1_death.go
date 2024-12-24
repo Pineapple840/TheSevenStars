@@ -16,3 +16,9 @@ embedded_components {
     y: -4.0
   }
 }
+embedded_components {
+  id: "sound"
+  type: "sound"
+  data: "sound: \"/game resources/audio/explosionCrunch_000.ogg\"\n"
+  ""
+}

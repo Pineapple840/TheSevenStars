@@ -2,6 +2,10 @@ components {
   id: "player"
   component: "/main/scripts/player.script"
 }
+components {
+  id: "death_sound"
+  component: "/game resources/audio/Retro Explosion Short 01.wav"
+}
 embedded_components {
   id: "wall_collider"
   type: "collisionobject"
@@ -10,7 +14,6 @@ embedded_components {
   "friction: 0.1\n"
   "restitution: 0.5\n"
   "group: \"players\"\n"
-  "mask: \"enemies\"\n"
   "mask: \"walls\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
@@ -58,13 +61,12 @@ embedded_components {
 embedded_components {
   id: "enemy collider"
   type: "collisionobject"
-  data: "type: COLLISION_OBJECT_TYPE_KINEMATIC\n"
+  data: "type: COLLISION_OBJECT_TYPE_TRIGGER\n"
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
   "group: \"players\"\n"
   "mask: \"enemies\"\n"
-  "mask: \"walls\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"

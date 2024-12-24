@@ -1,5 +1,6 @@
 function init(self)
 	print("enemy has died")
+	sound.play("#sound")
 	sprite.play_flipbook("#sprite", "anim", function()
 		go.delete()
 	end)

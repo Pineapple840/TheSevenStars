@@ -1,12 +1,43 @@
+local can_be_hit = false
 local input_enabled = false
 local move_speed = 6
+
+local function player_death(self)
+	can_be_hit = false
+	sound.play("#death_sound")
+	
+	timer.delay(0.0, false, function()
+		msg.post("#sprite", "disable")
+	end)
+	timer.delay(0.2, false, function()
+		msg.post("#sprite", "enable")
+	end)
+	timer.delay(0.4, false, function()
+		msg.post("#sprite", "disable")
+	end)
+	timer.delay(0.6, false, function()
+		msg.post("#sprite", "enable")
+	end)
+	timer.delay(0.8, false, function()
+		msg.post("#sprite", "disable")
+	end)
+	timer.delay(1, false, function()
+		msg.post("#sprite", "enable")
+	end)
+	
+	timer.delay(1, false, function()
+		can_be_hit = true
+	end)
+	
+end
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
 
 	local pos = go.get_position()
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 216, go.EASING_LINEAR, 5, 0, function()
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 216, go.EASING_LINEAR, 3, 0, function()
 		input_enabled = true
+		can_be_hit = true
 		timer.delay(0.1, true, function()
 			local pos = go.get_position()
 			factory.create("#bullet_producer", vmath.vector3(pos.x + 6, pos.y + 8, pos.z))
@@ -40,8 +71,9 @@ function on_message(self, message_id, message, sender)
 		input_enabled = true
 	end
 	
-	if message_id == hash("collision_response") then
+	if message_id == hash("trigger_response") and can_be_hit == true then
 		print("collisino")
+		player_death(self)
 	end
 end
 

@@ -1,17 +1,22 @@
-go.property("health", 200)
+go.property("health", 150)
+
+local function death(self)
+	go.delete()
+	factory.create("/level_1_controller#enemy_killer")
+end
 
 local function take_damage(self)
 	self.health = self.health - 10
 	if self.health <= 0 then
-		factory.create("/level_1_controller#enemy_killer")
-		go.delete()
+		death()
 	end
 end
 
 function init(self)
 	print("enemy spawned")
 	self.pos = go.get_position()
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, self.pos.y - 300, go.EASING_LINEAR, 4, 0, function()
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, self.pos.y / 100, 0, function()
+		print("enemy has despawned due to going out of bounds")
 		go.delete()
 	end)
 end
