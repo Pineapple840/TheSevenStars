@@ -11,10 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/pause_menu.gui"
-        :scene
-      ]
-      [
         "/main/scripts/pause.script"
         :code
       ]
@@ -28,10 +24,6 @@
       ]
       [
         "/main/player_bullet.tilemap"
-        :scene
-      ]
-      [
-        "/main/black_bars.gui"
         :scene
       ]
       [
@@ -51,10 +43,6 @@
         :scene
       ]
       [
-        "/main/main.collection"
-        :scene
-      ]
-      [
         "/main/scripts/game_loader.script"
         :code
       ]
@@ -64,10 +52,6 @@
       ]
       [
         "/main/game_images/player_bullets.tilesource"
-        :scene
-      ]
-      [
-        "/main/assets.atlas"
         :scene
       ]
       [
@@ -107,14 +91,6 @@
         :scene
       ]
       [
-        "/main/main_menu.gui"
-        :scene
-      ]
-      [
-        "/main/level.collection"
-        :scene
-      ]
-      [
         "/main/game_objects/player.go"
         :scene
       ]
@@ -133,6 +109,34 @@
       [
         "/main/scripts/enemy.script"
         :code
+      ]
+      [
+        "/main/assets.atlas"
+        :scene
+      ]
+      [
+        "/main/level_1.collection"
+        :scene
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/main_menu.gui"
+        :scene
+      ]
+      [
+        "/main/main_menu_upscaler.gui"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/black_bars.gui"
+        :scene
       ]
     ]
   }
