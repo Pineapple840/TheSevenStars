@@ -22,3 +22,6 @@ fullscreen = 0
 [sprite]
 max_count = 1024
 
+[sound]
+max_component_count = 256
+

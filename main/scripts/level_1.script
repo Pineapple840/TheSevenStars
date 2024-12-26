@@ -1,9 +1,12 @@
+go.property("player_lives", 3)
+go.property("score", 0)
+
 function init(self)
 	self.player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
 	timer.delay(5, false, function()
-		factory.create("#enemy1_spawner", vmath.vector3(300, 440, 0))
-		factory.create("#enemy1_spawner", vmath.vector3(300, 480, 0))
-		factory.create("#enemy1_spawner", vmath.vector3(300, 520, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(625, 480, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(650, 520, 0))
 	end)
 
 	timer.delay(8, false, function()
@@ -24,5 +27,11 @@ function on_message(self, message_id, message, sender)
 	end
 	if message_id == hash("start_input") then
 		msg.post(self.player, "start_input")
+	end
+	if message_id == hash("increase_score") then
+		print("level controller script has received message to add score")
+		print("score is", self.score)
+		self.score = self.score + message.to_add
+		msg.post("hud#hud", "set_score", {value = self.score})
 	end
 end

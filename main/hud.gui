@@ -1,2 +1,113 @@
+script: "/main/scripts/hud.gui_script"
+fonts {
+  name: "connection_bitmap"
+  font: "/game resources/fonts/connection_bitmap.font"
+}
+textures {
+  name: "hud"
+  texture: "/main/game_images/hud.tilesource"
+}
+nodes {
+  size {
+    x: 128.0
+    y: 576.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "left_background"
+  pivot: PIVOT_SW
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 1024.0
+  }
+  size {
+    x: 128.0
+    y: 576.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "right_background"
+  pivot: PIVOT_SE
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 58.0
+    y: 524.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Lives "
+  font: "connection_bitmap"
+  id: "life_counter"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 956.0
+    y: 524.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Score\n"
+  "\n"
+  ""
+  font: "connection_bitmap"
+  id: "score_counter"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 58.0
+    y: 506.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "3"
+  font: "connection_bitmap"
+  id: "life_counter_val"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 956.0
+    y: 506.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "0\n"
+  ""
+  font: "connection_bitmap"
+  id: "score_counter_val"
+  inherit_alpha: true
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
+materials {
+  name: "hud"
+  material: "/main/game_images/hud.material"
+}

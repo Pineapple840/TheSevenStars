@@ -2,6 +2,10 @@ components {
   id: "bullet"
   component: "/main/scripts/bullet.script"
 }
+components {
+  id: "sound"
+  component: "/game resources/audio/laserSmall_000.ogg"
+}
 embedded_components {
   id: "sprite"
   type: "sprite"

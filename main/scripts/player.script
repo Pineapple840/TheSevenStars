@@ -33,8 +33,6 @@ end
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
-
-	local pos = go.get_position()
 	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 216, go.EASING_LINEAR, 3, 0, function()
 		input_enabled = true
 		can_be_hit = true
@@ -43,6 +41,7 @@ function init(self)
 			factory.create("#bullet_producer", vmath.vector3(pos.x + 6, pos.y + 8, pos.z))
 			factory.create("#bullet_producer", vmath.vector3(pos.x - 4, pos.y + 2 , pos.z))
 			factory.create("#bullet_producer", vmath.vector3(pos.x + 16, pos.y + 2, pos.z))
+			sound.play("#bullet_sound", {gain = 0.7})
 
 		end)
 	end)

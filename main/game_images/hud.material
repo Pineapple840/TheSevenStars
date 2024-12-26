@@ -1,0 +1,3 @@
+name: "hud"
+vertex_program: "/builtins/materials/tile_map.vp"
+fragment_program: "/builtins/materials/tile_map.fp"

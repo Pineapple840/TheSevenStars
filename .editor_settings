@@ -11,43 +11,7 @@
   :workflow {
     :recent-files [
       [
-        "/main/scripts/pause.script"
-        :code
-      ]
-      [
-        "/main/scripts/pause_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/player_bullet.tilemap"
-        :scene
-      ]
-      [
-        "/main/scripts/level_background.script"
-        :code
-      ]
-      [
-        "/main/hud.gui"
-        :scene
-      ]
-      [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
-        "/main/loading_indicator.gui"
-        :scene
-      ]
-      [
         "/main/scripts/game_loader.script"
-        :code
-      ]
-      [
-        "/main/scripts/pause.script"
         :code
       ]
       [
@@ -67,20 +31,8 @@
         :code
       ]
       [
-        "/main/game_images/enemy_1_death.tilesource"
-        :scene
-      ]
-      [
-        "/main/game_objects/bullet.go"
-        :scene
-      ]
-      [
         "/main/game_objects/enemy.go"
         :scene
-      ]
-      [
-        "/main/scripts/bullet.script"
-        :code
       ]
       [
         "/game resources/images/player_ship.atlas"
@@ -91,35 +43,11 @@
         :scene
       ]
       [
-        "/main/game_objects/player.go"
-        :scene
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/scripts/level_1.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy_death.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
         "/main/assets.atlas"
         :scene
       ]
       [
         "/main/level_1.collection"
-        :scene
-      ]
-      [
-        "/main/level.collection"
         :scene
       ]
       [
@@ -137,6 +65,78 @@
       [
         "/main/black_bars.gui"
         :scene
+      ]
+      [
+        "/main/game_images/gui.tilemap"
+        :scene
+      ]
+      [
+        "/main/game_images/hud.material"
+        :cljfx-form-view
+      ]
+      [
+        "/main/game_images/hud.tilemap"
+        :scene
+      ]
+      [
+        "/main/game_images/hud.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy_1_death.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/hud.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/game_objects/bullet.go"
+        :scene
+      ]
+      [
+        "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy_death.script"
+        :code
       ]
     ]
   }
