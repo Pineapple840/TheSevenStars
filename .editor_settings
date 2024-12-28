@@ -95,10 +95,6 @@
         :code
       ]
       [
-        "/main/level.collection"
-        :scene
-      ]
-      [
         "/main/hud.gui"
         :scene
       ]
@@ -108,14 +104,6 @@
       ]
       [
         "/main/scripts/pause_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/hud.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/player.script"
         :code
       ]
       [
@@ -131,12 +119,24 @@
         :cljfx-form-view
       ]
       [
-        "/main/scripts/enemy.script"
+        "/main/scripts/player.script"
         :code
       ]
       [
         "/main/scripts/enemy_death.script"
         :code
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/scripts/hud.gui_script"
+        :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
       ]
     ]
   }

@@ -11,7 +11,6 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("set_score") then
-		print("second tower")
 		gui.set_text(self.score_counter_val, message.value)
 	end
 end
