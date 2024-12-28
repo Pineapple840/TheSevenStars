@@ -5,11 +5,15 @@ function init(self)
 	msg.post(".", "acquire_input_focus")
 end
 
-local function pause()
+local function pause(show_menu)
 	print("pause function run")
 	msg.post("#level_collection_proxy", "set_time_step", {factor = 0, mode = 0})
 	msg.post("level:/level_1_controller#level_1", "stop_input")
-	msg.post("main:/pause_menu", "enable")
+	if show_menu then 
+		msg.post("main:/pause_menu", "enable")
+	else
+		msg.post("main:/game_over_screen", "enable")
+	end
 	paused = true
 end
 
@@ -25,7 +29,7 @@ end
 function on_input(self, action_id, action)
 	if action_id == hash("esc") and action.pressed == true and can_pause == true then
 		if paused == false then
-			pause()
+			pause(true)
 		else
 			unpause()
 		end
@@ -33,6 +37,9 @@ function on_input(self, action_id, action)
 end
 
 function on_message(self, message_id, message, sender)
+	if message_id == hash("pause_from_game_over") then
+		pause(false)
+	end
 	if message_id == hash("unpause") then
 		unpause()
 	end

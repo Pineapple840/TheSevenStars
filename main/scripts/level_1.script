@@ -1,9 +1,20 @@
 go.property("player_lives", 3)
 go.property("score", 0)
 
+local function game_over(self)
+	print("game_over")
+	msg.post("main:/game_loader#pause", "pause_from_game_over")
+end
+
 function init(self)
 	self.player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
 	timer.delay(5, false, function()
+		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(625, 480, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(650, 520, 0))
+	end)
+
+	timer.delay(7, false, function()
 		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))
 		factory.create("#enemy1_spawner", vmath.vector3(625, 480, 0))
 		factory.create("#enemy1_spawner", vmath.vector3(650, 520, 0))
@@ -17,6 +28,16 @@ function init(self)
 		factory.create("#enemy1_spawner", vmath.vector3(500, 440, 0))
 		factory.create("#enemy1_spawner", vmath.vector3(500, 480, 0))
 		factory.create("#enemy1_spawner", vmath.vector3(500, 520, 0))
+	end)
+	
+	timer.delay(15, false, function()
+		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(625, 480, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(650, 520, 0))
+	end)
+
+	timer.delay(17, false, function()
+		factory.create("#enemy1_spawner", vmath.vector3(400, 440, 0))
 	end)
 end
 
@@ -39,5 +60,8 @@ function on_message(self, message_id, message, sender)
 		print("life count is", self.player_lives)
 		self.player_lives = self.player_lives + message.value
 		msg.post("hud#hud", "set_lives", {value = self.player_lives})
+		if self.player_lives <= 0 then
+			game_over(self)
+		end
 	end
 end

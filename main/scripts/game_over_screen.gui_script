@@ -1,0 +1,24 @@
+local pause_menu_active = true
+local selection_counter = 0
+local right_selection_arrows_positions = {{658, 330}, {647, 246}}
+local left_selection_arrows_positions = {{366, 330}, {397, 246}}
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+	self.left_selection_arrows = gui.get_node("left_selection_arrows")
+	self.right_selection_arrows = gui.get_node("right_selection_arrows")
+	self.background = gui.get_node("background")
+	self.game_over_text = gui.get_node("game_over_text")
+	self.exit_to_menu = gui.get_node("exit_to_menu")
+end
+
+
+
+function on_input(self, action_id, action)
+	if action_id == hash("space") and action.pressed and pause_menu_active == true then
+		print("space pressed")
+		msg.post("/game_loader#pause", "unpause")
+		msg.post("/controller#main_controller", "exit_to_menu")
+	end
+end

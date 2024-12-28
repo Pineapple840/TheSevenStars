@@ -43,7 +43,7 @@ function init(self)
 			factory.create("#bullet_producer", vmath.vector3(pos.x + 6, pos.y + 8, pos.z))
 			factory.create("#bullet_producer", vmath.vector3(pos.x - 4, pos.y + 2 , pos.z))
 			factory.create("#bullet_producer", vmath.vector3(pos.x + 16, pos.y + 2, pos.z))
-			sound.play("#bullet_sound", {gain = 0.7})
+			sound.play("#bullet_sound", {gain = 0.5})
 
 		end)
 	end)

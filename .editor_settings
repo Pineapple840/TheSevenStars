@@ -11,26 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/game_images/player_bullets.tilesource"
-        :scene
-      ]
-      [
-        "/main/enemy_sprites.atlas"
-        :scene
-      ]
-      [
-        "/main/scripts/camerascript.script"
-        :code
-      ]
-      [
-        "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla'ed/Destruction/Aseprite/Kla'ed - Scout - Destruction.aseprite"
-        :code
-      ]
-      [
-        "/game resources/images/player_ship.atlas"
-        :scene
-      ]
-      [
         "/main/game_objects/enemy1_death.go"
         :scene
       ]
@@ -71,14 +51,6 @@
         :scene
       ]
       [
-        "/main/scripts/pause.script"
-        :code
-      ]
-      [
-        "/main/scripts/pause_menu.gui_script"
-        :code
-      ]
-      [
         "/main/scripts/bullet.script"
         :code
       ]
@@ -115,19 +87,39 @@
         :scene
       ]
       [
-        "/main/scripts/level_1.script"
+        "/main/scripts/enemy.script"
         :code
       ]
       [
-        "/main/scripts/enemy.script"
-        :code
+        "/main/hud.gui"
+        :scene
       ]
       [
         "/main/scripts/hud.gui_script"
         :code
       ]
       [
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/game_over_screen.gui"
+        :scene
+      ]
+      [
         "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
         :code
       ]
       [
@@ -135,8 +127,16 @@
         :scene
       ]
       [
-        "/main/hud.gui"
-        :scene
+        "/main/scripts/game_over_screen.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
       ]
     ]
   }

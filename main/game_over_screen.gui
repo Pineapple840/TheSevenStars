@@ -1,0 +1,120 @@
+script: "/main/scripts/game_over_screen.gui_script"
+fonts {
+  name: "connection_bitmap"
+  font: "/game resources/fonts/connection_bitmap.font"
+}
+nodes {
+  position {
+    x: 512.0
+    y: 288.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "background"
+  layer: "background_layer"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 396.0
+    y: 246.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 20.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: ">>"
+  font: "connection_bitmap"
+  id: "left_selection_arrows"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 627.0
+    y: 246.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 20.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "<<"
+  font: "connection_bitmap"
+  id: "right_selection_arrows"
+  pivot: PIVOT_W
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 246.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 115.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Exit To Menu\n"
+  ""
+  font: "connection_bitmap"
+  id: "exit_to_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 330.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 146.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Game Over!"
+  font: "connection_bitmap"
+  id: "game_over_text"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+layers {
+  name: "background_layer"
+}
+layers {
+  name: "button_layer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
