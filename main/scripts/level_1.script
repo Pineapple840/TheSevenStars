@@ -31,7 +31,13 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("increase_score") then
 		print("level controller script has received message to add score")
 		print("score is", self.score)
-		self.score = self.score + message.to_add
+		self.score = self.score + message.value
 		msg.post("hud#hud", "set_score", {value = self.score})
+	end
+	if message_id == hash("change_life") then
+		print("level controller script has received message to change life")
+		print("life count is", self.player_lives)
+		self.player_lives = self.player_lives + message.value
+		msg.post("hud#hud", "set_lives", {value = self.player_lives})
 	end
 end

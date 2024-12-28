@@ -1,7 +1,7 @@
 function init(self)
 	print("enemy has died")
 	sound.play("#sound")
-	msg.post("/level_1_controller#level_1", "increase_score", {to_add = 200})
+	msg.post("/level_1_controller#level_1", "increase_score", {value = 200})
 	sprite.play_flipbook("#sprite", "anim", function()
 		go.delete()
 	end)

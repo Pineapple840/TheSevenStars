@@ -11,10 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/scripts/game_loader.script"
-        :code
-      ]
-      [
         "/main/game_images/player_bullets.tilesource"
         :scene
       ]
@@ -31,10 +27,6 @@
         :code
       ]
       [
-        "/main/game_objects/enemy.go"
-        :scene
-      ]
-      [
         "/game resources/images/player_ship.atlas"
         :scene
       ]
@@ -47,19 +39,11 @@
         :scene
       ]
       [
-        "/main/level_1.collection"
-        :scene
-      ]
-      [
         "/main/main_menu.gui"
         :scene
       ]
       [
         "/main/main_menu_upscaler.gui"
-        :scene
-      ]
-      [
-        "/main/main.collection"
         :scene
       ]
       [
@@ -87,28 +71,12 @@
         :scene
       ]
       [
-        "/main/game_objects/player.go"
-        :scene
-      ]
-      [
         "/main/scripts/pause.script"
-        :code
-      ]
-      [
-        "/main/hud.gui"
-        :scene
-      ]
-      [
-        "/main/scripts/level_1.script"
         :code
       ]
       [
         "/main/scripts/pause_menu.gui_script"
         :code
-      ]
-      [
-        "/main/game_objects/bullet.go"
-        :scene
       ]
       [
         "/main/scripts/bullet.script"
@@ -119,11 +87,35 @@
         :cljfx-form-view
       ]
       [
-        "/main/scripts/player.script"
-        :code
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/pause_menu.gui"
+        :scene
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/bullet.go"
+        :scene
       ]
       [
         "/main/scripts/enemy_death.script"
+        :code
+      ]
+      [
+        "/main/level_1.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/level_1.script"
         :code
       ]
       [
@@ -135,7 +127,15 @@
         :code
       ]
       [
-        "/main/level.collection"
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/hud.gui"
         :scene
       ]
     ]

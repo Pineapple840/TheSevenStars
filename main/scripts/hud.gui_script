@@ -13,4 +13,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("set_score") then
 		gui.set_text(self.score_counter_val, message.value)
 	end
+	if message_id == hash("set_lives") then
+		gui.set_text(self.life_counter_val, message.value)
+	end
 end

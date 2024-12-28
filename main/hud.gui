@@ -44,7 +44,7 @@ nodes {
 }
 nodes {
   position {
-    x: 58.0
+    x: 64.0
     y: 524.0
   }
   size {
@@ -59,8 +59,8 @@ nodes {
 }
 nodes {
   position {
-    x: 956.0
-    y: 524.0
+    x: 960.0
+    y: 516.0
   }
   size {
     x: 200.0
@@ -76,7 +76,7 @@ nodes {
 }
 nodes {
   position {
-    x: 58.0
+    x: 64.0
     y: 506.0
   }
   size {
@@ -91,7 +91,7 @@ nodes {
 }
 nodes {
   position {
-    x: 956.0
+    x: 960.0
     y: 506.0
   }
   size {

@@ -5,7 +5,9 @@ local move_speed = 6
 local function player_death(self)
 	can_be_hit = false
 	sound.play("#death_sound")
-	
+
+	msg.post("/level_1_controller#level_1", "change_life", {value = -1})
+
 	timer.delay(0.0, false, function()
 		msg.post("#sprite", "disable")
 	end)
