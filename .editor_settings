@@ -68,6 +68,7 @@
       ]
       [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "/main/game_objects/player.go"
         :scene
       ]
@@ -114,6 +115,8 @@
       [
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         "/main/scripts/pause.script"
         :code
       ]
@@ -140,6 +143,10 @@
       [
         "/main/scripts/level_1.script"
         :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
       ]
       [
         "/main/level.collection"
