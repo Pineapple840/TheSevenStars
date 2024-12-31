@@ -7,6 +7,10 @@ fonts {
   name: "connection_bitmap"
   font: "/game resources/fonts/connection_bitmap.font"
 }
+fonts {
+  name: "connection_bitmap_new"
+  font: "/game resources/fonts/connection_bitmap_new.font"
+}
 textures {
   name: "assets"
   texture: "/main/assets.atlas"
@@ -30,7 +34,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "*insert my epic logo here*"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "p840_logo"
   layer: "button_layer"
   inherit_alpha: true
@@ -82,7 +86,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "Start Game"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "start_game"
   pivot: PIVOT_E
   layer: "button_layer"
@@ -104,7 +108,7 @@ nodes {
   type: TYPE_TEXT
   text: "Options\n"
   ""
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "options"
   pivot: PIVOT_E
   layer: "button_layer"
@@ -125,7 +129,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "Scores"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "scores"
   pivot: PIVOT_E
   layer: "button_layer"
@@ -146,7 +150,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "Credits"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "credits"
   pivot: PIVOT_E
   layer: "button_layer"
@@ -167,7 +171,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "Exit"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "exit"
   pivot: PIVOT_E
   layer: "button_layer"
@@ -190,7 +194,7 @@ nodes {
   text: "The \n"
   "Seven \n"
   "Stars"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "the_seven_stars"
   pivot: PIVOT_W
   layer: "button_layer"
@@ -211,7 +215,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: ">>"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "left_selection_arrows"
   pivot: PIVOT_E
   layer: "button_layer"
@@ -232,7 +236,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "<<"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "right_selection_arrows"
   pivot: PIVOT_W
   layer: "button_layer"

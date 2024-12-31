@@ -19,6 +19,6 @@ embedded_components {
 embedded_components {
   id: "sound"
   type: "sound"
-  data: "sound: \"/game resources/audio/explosionCrunch_000.ogg\"\n"
+  data: "sound: \"/game resources/audio/sfx/explosionCrunch_000.ogg\"\n"
   ""
 }

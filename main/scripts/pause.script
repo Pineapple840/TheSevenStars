@@ -9,6 +9,8 @@ local function pause(show_menu)
 	print("pause function run")
 	msg.post("#level_collection_proxy", "set_time_step", {factor = 0, mode = 0})
 	msg.post("level:/level_1_controller#level_1", "stop_input")
+	msg.post("level:/level_1_controller#level_1", "stop_music")
+	
 	if show_menu then 
 		msg.post("main:/pause_menu", "enable")
 	else

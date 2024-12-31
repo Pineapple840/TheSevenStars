@@ -3,6 +3,10 @@ fonts {
   name: "connection_bitmap"
   font: "/game resources/fonts/connection_bitmap.font"
 }
+fonts {
+  name: "connection_bitmap_new"
+  font: "/game resources/fonts/connection_bitmap_new.font"
+}
 textures {
   name: "hud"
   texture: "/main/game_images/hud.tilesource"
@@ -53,7 +57,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "Lives "
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "life_counter"
   inherit_alpha: true
 }
@@ -70,7 +74,7 @@ nodes {
   text: "Score\n"
   "\n"
   ""
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "score_counter"
   inherit_alpha: true
 }
@@ -85,7 +89,7 @@ nodes {
   }
   type: TYPE_TEXT
   text: "3"
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "life_counter_val"
   inherit_alpha: true
 }
@@ -101,7 +105,7 @@ nodes {
   type: TYPE_TEXT
   text: "0\n"
   ""
-  font: "connection_bitmap"
+  font: "connection_bitmap_new"
   id: "score_counter_val"
   inherit_alpha: true
 }

@@ -11,101 +11,15 @@
   :workflow {
     :recent-files [
       [
-        "/main/game_objects/enemy1_death.go"
-        :scene
-      ]
-      [
-        "/main/assets.atlas"
-        :scene
-      ]
-      [
-        "/main/main_menu.gui"
-        :scene
-      ]
-      [
-        "/main/main_menu_upscaler.gui"
-        :scene
-      ]
-      [
-        "/main/black_bars.gui"
-        :scene
-      ]
-      [
-        "/main/game_images/gui.tilemap"
-        :scene
-      ]
-      [
-        "/main/game_images/hud.material"
-        :cljfx-form-view
-      ]
-      [
-        "/main/game_images/hud.tilemap"
-        :scene
-      ]
-      [
-        "/main/game_images/hud.tilesource"
-        :scene
-      ]
-      [
-        "/main/game_images/enemy_1_death.tilesource"
-        :scene
+        "/game resources/audio/music/1350831_Space-Adventure_intro.mp3"
+        :code
       ]
       [
         "/main/scripts/bullet.script"
         :code
       ]
       [
-        "/game.project"
-        :cljfx-form-view
-      ]
-      [
         "/main/level.collection"
-        :scene
-      ]
-      [
-        "/main/pause_menu.gui"
-        :scene
-      ]
-      [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "/main/game_objects/player.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/enemy.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/bullet.go"
-        :scene
-      ]
-      [
-        "/main/scripts/enemy_death.script"
-        :code
-      ]
-      [
-        "/main/level_1.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
-        "/main/hud.gui"
-        :scene
-      ]
-      [
-        "/main/scripts/hud.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/game_over_screen.gui"
         :scene
       ]
       [
@@ -113,31 +27,7 @@
         :code
       ]
       [
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         "/main/scripts/pause.script"
-        :code
-      ]
-      [
-        "/main/scripts/pause_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/game_over_screen.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/game_loader.script"
         :code
       ]
       [
@@ -145,11 +35,31 @@
         :code
       ]
       [
-        "/main/level.collection"
+        "/main/game_objects/enemy.go"
         :scene
       ]
       [
-        "/main/level.collection"
+        "/game resources/fonts/connection_bitmap.font"
+        :scene
+      ]
+      [
+        "/game resources/fonts/connection_bitmap_new.font"
+        :scene
+      ]
+      [
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/game_over_screen.gui"
+        :scene
+      ]
+      [
+        "/main/pause_menu.gui"
+        :scene
+      ]
+      [
+        "/main/main_menu.gui"
         :scene
       ]
     ]

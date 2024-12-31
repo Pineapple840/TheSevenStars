@@ -8,6 +8,8 @@ end
 
 function init(self)
 	self.player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
+	sound.play("#level_music_intro", {gain = 0.3})
+	
 	timer.delay(5, false, function()
 		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))
 		factory.create("#enemy1_spawner", vmath.vector3(625, 480, 0))
@@ -45,14 +47,18 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("stop_input") then
 		msg.post(self.player, "stop_input")
+		sound.pause("#level_music_intro", true)
 	end
+	
 	if message_id == hash("start_input") then
 		msg.post(self.player, "start_input")
+		sound.pause("#level_music_intro", false)
 	end
+	
 	if message_id == hash("increase_score") then
 		print("level controller script has received message to add score")
-		print("score is", self.score)
 		self.score = self.score + message.value
+		print("score is", self.score)
 		msg.post("hud#hud", "set_score", {value = self.score})
 	end
 	if message_id == hash("change_life") then

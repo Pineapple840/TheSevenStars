@@ -4,7 +4,7 @@ components {
 }
 components {
   id: "sound"
-  component: "/game resources/audio/laserSmall_000.ogg"
+  component: "/game resources/audio/sfx/laserSmall_000.ogg"
 }
 embedded_components {
   id: "sprite"

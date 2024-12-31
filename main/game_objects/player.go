@@ -4,11 +4,11 @@ components {
 }
 components {
   id: "death_sound"
-  component: "/game resources/audio/Retro Explosion Short 01.wav"
+  component: "/game resources/audio/sfx/Retro Explosion Short 01.wav"
 }
 components {
   id: "bullet_sound"
-  component: "/game resources/audio/laserSmall_000.ogg"
+  component: "/game resources/audio/sfx/laserSmall_000.ogg"
 }
 embedded_components {
   id: "wall_collider"
