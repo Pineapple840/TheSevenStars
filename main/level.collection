@@ -63,6 +63,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/main/game_objects/enemy1_death.go\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"enemy2_spawner\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/main/game_objects/enemy2.go\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

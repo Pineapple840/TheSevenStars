@@ -15,28 +15,8 @@
         :code
       ]
       [
-        "/main/scripts/bullet.script"
-        :code
-      ]
-      [
-        "/main/level.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
         "/main/scripts/pause.script"
         :code
-      ]
-      [
-        "/main/scripts/level_1.script"
-        :code
-      ]
-      [
-        "/main/game_objects/enemy.go"
-        :scene
       ]
       [
         "/game resources/fonts/connection_bitmap.font"
@@ -55,12 +35,104 @@
         :scene
       ]
       [
+        "/main/main_menu.gui"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy1_death.go"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy_1.script"
+        :code
+      ]
+      [
+        "/main/enemy2_weapons.tilemap"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/game_objects/enemy.go"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy_death.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy_general.script"
+        :code
+      ]
+      [
+        "/main/player_bullet.tilemap"
+        :scene
+      ]
+      [
+        "/main/game_objects/bullet.go"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy2_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/scripts/bullet.script"
+        :code
+      ]
+      [
+        "/main/game_images/enemy2_weapons.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_images/player_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy2_bullet.script"
+        :code
+      ]
+      [
+        "/main/game_objects/enemy2_bullet.go"
+        :scene
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy2.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
         "/main/pause_menu.gui"
         :scene
       ]
       [
-        "/main/main_menu.gui"
-        :scene
+        "/main/scripts/pause_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy2.script"
+        :code
       ]
     ]
   }

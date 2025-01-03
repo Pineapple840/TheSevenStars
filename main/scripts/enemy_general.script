@@ -1,0 +1,30 @@
+go.property("health", 150)
+go.property("dead", false)
+
+local function death(self)
+	go.delete()
+	factory.create("/level_1_controller#enemy_killer")
+end
+
+local function take_damage(self)
+	self.health = self.health - 10
+	if self.health <= 0 and self.dead == false then
+		self.dead = true
+		death(self)
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") and message.enter then
+		if message.other_group == hash("bullets") then
+			take_damage(self)
+		end
+		if message.other_group == hash("players") then 
+			self.dead = true
+			death(self)
+		end
+	end
+	if message_id == hash("set_health") then
+		self.health = message.health
+	end
+end

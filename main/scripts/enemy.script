@@ -1,37 +1,9 @@
-go.property("health", 150)
-go.property("dead", false)
-
-local function death(self)
-	go.delete()
-	factory.create("/level_1_controller#enemy_killer")
-end
-
-local function take_damage(self)
-	self.health = self.health - 10
-	if self.health <= 0 and self.dead == false then
-		self.dead = true
-		death(self)
-	end
-end
-
 function init(self)
 	print("enemy spawned")
+	msg.post("#enemy_general", "set_health", {health = 150, death_url = msg.url("/level_1_controller#enemy_killer")})
 	self.pos = go.get_position()
 	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, self.pos.y / 100, 0, function()
 		print("enemy has despawned due to going out of bounds")
 		go.delete()
 	end)
-end
-
-function on_message(self, message_id, message, sender)
-	if message_id == hash("trigger_response") and message.enter then
-		if message.other_group == hash("bullets") then
-			print("bullet has collided with enemy")
-			take_damage(self)
-		end
-		if message.other_group == hash("players") then 
-			self.dead = true
-			death(self)
-		end
-	end
 end
