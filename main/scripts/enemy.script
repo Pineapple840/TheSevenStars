@@ -1,6 +1,6 @@
 function init(self)
 	print("enemy spawned")
-	msg.post("#enemy_general", "set_health", {health = 150, death_url = msg.url("/level_1_controller#enemy_killer")})
+	msg.post("#enemy_general", "set_health", {health = 150, death_url = msg.url("/level_1_controller#enemy_killer"), score = 200})
 	self.pos = go.get_position()
 	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, self.pos.y / 100, 0, function()
 		print("enemy has despawned due to going out of bounds")

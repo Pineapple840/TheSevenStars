@@ -3,7 +3,8 @@ go.property("dead", false)
 
 local function death(self)
 	go.delete()
-	factory.create("/level_1_controller#enemy_killer")
+	msg.post("/level_1_controller#level_1", "increase_score", {value = self.score})
+	factory.create(self.death_url)
 end
 
 local function take_damage(self)
@@ -26,5 +27,7 @@ function on_message(self, message_id, message, sender)
 	end
 	if message_id == hash("set_health") then
 		self.health = message.health
+		self.death_url = message.death_url
+		self.score = message.score
 	end
 end

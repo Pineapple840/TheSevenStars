@@ -1,6 +1,6 @@
 function init(self)
 	local pos = go.get_position()
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y - 300, go.EASING_LINEAR, 2, 0, function()
+	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y - 600, go.EASING_LINEAR, 4, 0, function()
 		go.delete()
 	end)
 end

@@ -1,4 +1,4 @@
-image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Scout - Destruction.png"
+image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Fighter - Destruction.png"
 tile_width: 64
 tile_height: 64
 collision_groups: "default"

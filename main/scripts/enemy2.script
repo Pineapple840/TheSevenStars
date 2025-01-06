@@ -1,7 +1,7 @@
 function init(self)
 	print("enemy spawned")
 	sprite.play_flipbook("#sprite", "anim")
-	msg.post("#enemy_general", "set_health", {health = 300, death_url = msg.url("/level_1_controller#enemy_killer")})
+	msg.post("#enemy_general", "set_health", {health = 300, death_url = msg.url("/level_1_controller#enemy2_killer"), score = 400})
 	timer.delay(1, true, function()
 		timer.delay(0.167, false, function()
 			self.pos = go.get_position()

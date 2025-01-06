@@ -1,0 +1,13 @@
+image: "/game resources/images/Yellow Effect Bullet Impact Explosion 32x32.png"
+tile_width: 32
+tile_height: 32
+collision_groups: "default"
+animations {
+  id: "anim"
+  start_tile: 297
+  end_tile: 300
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+  flip_vertical: 1
+}
+extrude_borders: 2
