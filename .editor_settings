@@ -11,43 +11,7 @@
   :workflow {
     :recent-files [
       [
-        "/main/hud.gui"
-        :scene
-      ]
-      [
-        "/main/game_over_screen.gui"
-        :scene
-      ]
-      [
-        "/main/main_menu.gui"
-        :scene
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/enemy_1.script"
-        :code
-      ]
-      [
-        "/main/enemy2_weapons.tilemap"
-        :scene
-      ]
-      [
-        "/main/game_objects/enemy.go"
-        :scene
-      ]
-      [
-        "/main/player_bullet.tilemap"
-        :scene
-      ]
-      [
         "/main/game_objects/bullet.go"
-        :scene
-      ]
-      [
-        "/main/game_images/enemy2_bullets.tilesource"
         :scene
       ]
       [
@@ -87,44 +51,12 @@
         :code
       ]
       [
-        "/main/scripts/enemy_general.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy2_bullet.script"
-        :code
-      ]
-      [
-        "/main/game_objects/enemy1_death.go"
-        :scene
-      ]
-      [
-        "/main/level.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy2.script"
-        :code
-      ]
-      [
         "/main/game_objects/enemy2_death.go"
         :scene
       ]
       [
         "/main/game_images/enemy_2_death.tilesource"
         :scene
-      ]
-      [
-        "/main/game_images/enemy_1_death.tilesource"
-        :scene
-      ]
-      [
-        "/main/scripts/level_1.script"
-        :code
       ]
       [
         "/game resources/images/Foozle_2DS0016_Void_PickupsPack/Shield Generators/Aseprite/Pickup Icon - Shield Generator - All around shield.aseprite"
@@ -137,6 +69,74 @@
       [
         "/main/game_objects/player.go"
         :scene
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy_general.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy2_bullet.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy.script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy2.script"
+        :code
+      ]
+      [
+        "/main/game_objects/enemy1_death.go"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy_1_death.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy3_weapons.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy3.go"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy2_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy3_bullets.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy3_bullet.go"
+        :scene
+      ]
+      [
+        "/main/scripts/enemy3.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/enemy3_bullet.script"
+        :code
       ]
     ]
   }

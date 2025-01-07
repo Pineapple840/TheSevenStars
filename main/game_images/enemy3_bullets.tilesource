@@ -1,0 +1,14 @@
+image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Projectiles/PNGs/Kla\'ed - Torpedo.png"
+tile_width: 9
+tile_height: 32
+tile_spacing: 2
+collision_groups: "default"
+animations {
+  id: "anim"
+  start_tile: 1
+  end_tile: 3
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+  flip_vertical: 1
+}
+inner_padding: 1
