@@ -11,28 +11,12 @@
   :workflow {
     :recent-files [
       [
-        "/main/game_objects/bullet.go"
-        :scene
-      ]
-      [
-        "/main/scripts/bullet.script"
-        :code
-      ]
-      [
-        "/main/game_images/enemy2_weapons.tilesource"
-        :scene
-      ]
-      [
         "/main/game_images/player_bullets.tilesource"
         :scene
       ]
       [
         "/main/game_objects/enemy2_bullet.go"
         :scene
-      ]
-      [
-        "/main/scripts/player.script"
-        :code
       ]
       [
         "/main/game_objects/enemy2.go"
@@ -71,23 +55,11 @@
         :scene
       ]
       [
-        "/main/level.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
         "/main/scripts/enemy_general.script"
         :code
       ]
       [
         "/main/scripts/enemy2_bullet.script"
-        :code
-      ]
-      [
-        "/main/scripts/level_1.script"
         :code
       ]
       [
@@ -107,15 +79,27 @@
         :scene
       ]
       [
-        "/main/game_images/enemy3_weapons.tilesource"
+        "/main/game_images/enemy2_bullets.tilesource"
         :scene
+      ]
+      [
+        "/main/level_1.collection"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
+        :code
       ]
       [
         "/main/game_objects/enemy3.go"
         :scene
       ]
       [
-        "/main/game_images/enemy2_bullets.tilesource"
+        "/main/game_images/enemy3_weapons.tilesource"
         :scene
       ]
       [
@@ -127,15 +111,31 @@
         :scene
       ]
       [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
         "/main/scripts/enemy3.script"
         :code
       ]
       [
-        "/main/scripts/main_menu.gui_script"
+        "/main/scripts/enemy3_bullet.script"
         :code
       ]
       [
-        "/main/scripts/enemy3_bullet.script"
+        "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_1.script"
         :code
       ]
     ]

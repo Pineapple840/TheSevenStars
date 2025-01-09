@@ -1,7 +1,14 @@
 function init(self)
 	local pos = go.get_position()
-	go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y - 600, go.EASING_LINEAR, 4, 0, function()
-		go.delete()
+	timer.delay(1, true, function()
+		
+		self.pos = go.get_position()
+		msg.post(receiver, message_id)
+
+		
+		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y - 600, go.EASING_LINEAR, 4, 0, function()
+			go.delete()
+		end)
 	end)
 end
 

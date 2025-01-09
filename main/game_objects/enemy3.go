@@ -3,8 +3,8 @@ components {
   component: "/main/scripts/enemy_general.script"
 }
 components {
-  id: "enemy2"
-  component: "/main/scripts/enemy2.script"
+  id: "enemy3"
+  component: "/main/scripts/enemy3.script"
 }
 components {
   id: "bullet_sound"
@@ -50,6 +50,6 @@ embedded_components {
 embedded_components {
   id: "bullet_producer"
   type: "factory"
-  data: "prototype: \"/main/game_objects/enemy2_bullet.go\"\n"
+  data: "prototype: \"/main/game_objects/enemy3_bullet.go\"\n"
   ""
 }

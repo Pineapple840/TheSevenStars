@@ -23,7 +23,7 @@ function init(self)
 	end)
 
 	timer.delay(8, false, function()
-		factory.create("#enemy2_spawner", vmath.vector3(400, 440, 0))
+		factory.create("#enemy3_spawner", vmath.vector3(400, 440, 0))
 	end)
 
 	timer.delay(13, false, function()
