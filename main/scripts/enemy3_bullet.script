@@ -1,19 +1,50 @@
+local function track_player(self, dt)
+	if dt ~= 0 then
+		self.pos = go.get_position()
+		msg.post("/level_1_controller#level_1", "return_player_position")
+		
+		-- local distance = vmath.length(position - hero_position)
+	end
+end
+
 function init(self)
 	local pos = go.get_position()
-	timer.delay(1, true, function()
+	timer.delay(0, false, function()
 		
 		self.pos = go.get_position()
-		msg.post(receiver, message_id)
+		msg.post("/level_1_controller#level_1", "return_player_position")
 
 		
-		go.animate(".", "position.y", go.PLAYBACK_ONCE_FORWARD, pos.y - 600, go.EASING_LINEAR, 4, 0, function()
-			go.delete()
-		end)
 	end)
 end
 
-function on_message(self, message_id, message, sender)
+function on_message(self, message_id, message, sender, dt)
 	if message_id == hash("trigger_response") and message.enter then
 		go.delete()
 	end
+
+	if message_id == hash("receive_position") then
+
+		self.player_pos = message.value
+		self.direction = vmath.normalize(self.player_pos - self.pos)
+
+		local rot = go.get_rotation()
+		--local rot_amount = math.rad(self.rotation_speed * self.input.x * dt)
+		rot = vmath.quat_rotation_z((math.atan2(self.player_pos.y - self.pos.y, self.player_pos.x - self.pos.x) + math.pi/2)/10)
+		go.set_rotation(rot)
+
+		local UP = vmath.vector3(0, -1, 0)
+		local move_amount = UP * 1 * 1
+		local rot_amount = math.rad(1)
+		
+		local p = go.get_position()
+		p = p + vmath.rotate(rot, move_amount)
+		go.set_position(p)
+		
+	end
+end
+
+function update(self, dt)
+	track_player(self, dt)
+	print(dt)
 end

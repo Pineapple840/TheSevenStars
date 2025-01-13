@@ -94,4 +94,9 @@ function on_message(self, message_id, message, sender)
 			game_over(self)
 		end
 	end
+
+	if message_id == hash("return_player_position") then
+		self.player_pos = go.get_position(self.player)
+		msg.post(sender, "receive_position", {value = self.player_pos})
+	end
 end

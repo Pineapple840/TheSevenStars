@@ -3,8 +3,8 @@ components {
   component: "/game resources/audio/sfx/laserSmall_000.ogg"
 }
 components {
-  id: "enemy2_bullet"
-  component: "/main/scripts/enemy2_bullet.script"
+  id: "enemy3_bullet"
+  component: "/main/scripts/enemy3_bullet.script"
 }
 embedded_components {
   id: "sprite"
