@@ -26,19 +26,22 @@ function on_message(self, message_id, message, sender, dt)
 	if message_id == hash("receive_position") then
 
 		self.player_pos = message.value
-		self.direction = vmath.normalize(self.player_pos - self.pos)
+		self.direction = go.get_rotation()
 
-		local rot = go.get_rotation()
+		if self.pos.y < 144 or self.pos.x < 300 or self.pos.x > 724 then
+			go.delete()
+		end
+
 		--local rot_amount = math.rad(self.rotation_speed * self.input.x * dt)
-		rot = vmath.quat_rotation_z((math.atan2(self.player_pos.y - self.pos.y, self.player_pos.x - self.pos.x) + math.pi/2)/10)
-		go.set_rotation(rot)
+		local rot = vmath.quat_rotation_z(math.atan2(self.player_pos.y - self.pos.y, self.player_pos.x - self.pos.x) + math.pi/2)
 
 		local UP = vmath.vector3(0, -1, 0)
-		local move_amount = UP * 1 * 1
-		local rot_amount = math.rad(1)
+		local targetr = vmath.slerp(0.01, self.direction, rot)
+		go.set_rotation(targetr)
+		local move_right = vmath.rotate(targetr, UP)
 		
 		local p = go.get_position()
-		p = p + vmath.rotate(rot, move_amount)
+		p = p + 2 * move_right
 		go.set_position(p)
 		
 	end
@@ -46,5 +49,4 @@ end
 
 function update(self, dt)
 	track_player(self, dt)
-	print(dt)
 end

@@ -7,6 +7,8 @@ function init(self)
 	self.life_counter_val = gui.get_node("life_counter_val")
 	self.score_counter = gui.get_node("score_counter")
 	self.score_counter_val = gui.get_node("score_counter_val")
+	self.score_threshold = gui.get_node("score_threshold")
+	self.score_threshold_val = gui.get_node("score_threshold_val")
 end
 
 function on_message(self, message_id, message, sender)
@@ -15,5 +17,8 @@ function on_message(self, message_id, message, sender)
 	end
 	if message_id == hash("set_lives") then
 		gui.set_text(self.life_counter_val, message.value)
+	end
+	if message_id == hash("set_threshold") then
+		gui.set_text(self.score_threshold_val, message.value)
 	end
 end

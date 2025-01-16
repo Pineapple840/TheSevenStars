@@ -1,9 +1,13 @@
 -- This handles my main menu gui. Includes the splash screen and menu navigation.
 local main_menu_active = false
+local current_screen = "main"
 
 local selection_counter = 0
-local right_selection_arrows_positions = {{991, 300}, {991, 240}, {991, 180}, {991, 120}, {991, 60}}
-local left_selection_arrows_positions = {{780, 300}, {855, 240}, {871, 180}, {862, 120}, {922, 60}}
+local right_selection_arrows_positions = {{980, 300}, {980, 240}, {980, 180}, {980, 120}, {980, 60}}
+local left_selection_arrows_positions = {{767, 300}, {834, 240}, {850, 180}, {841, 120}, {901, 60}}
+
+local options_right_selection_arrows_positions = {{980, 210}, {980, 150}, {980, 90}}
+local options_left_selection_arrows_positions = {{654, 210}, {694, 150}, {842, 90}}
 
 local function load_menu(self)
 	gui.set_position(self.left_selection_arrows,
@@ -13,6 +17,59 @@ local function load_menu(self)
 	vmath.vector3(right_selection_arrows_positions[1][1], right_selection_arrows_positions[1][2], 0))
 
 	msg.post("/gui", "enable")
+end
+
+local function load_menu_items(self)
+	gui.set_enabled(self.p840_logo, false)
+	gui.set_enabled(self.the_seven_stars, true)
+	gui.set_enabled(self.background, true)
+	gui.set_enabled(self.start_game, true)
+	gui.set_enabled(self.options, true)
+	gui.set_enabled(self.scores, true)
+	gui.set_enabled(self.scores, true)
+	gui.set_enabled(self.credits, true)
+	gui.set_enabled(self.exit, true)
+	gui.set_enabled(self.left_selection_arrows, true)
+	gui.set_enabled(self.right_selection_arrows, true)
+
+	gui.set_enabled(self.options_return, false)
+	gui.set_enabled(self.options_sfx, false)
+	gui.set_enabled(self.options_music, false)
+
+	current_screen = "main"
+	selection_counter = 0
+
+	gui.set_position(self.left_selection_arrows,
+	vmath.vector3(left_selection_arrows_positions[1][1], left_selection_arrows_positions[1][2], 0))
+
+	gui.set_position(self.right_selection_arrows,
+	vmath.vector3(right_selection_arrows_positions[1][1], right_selection_arrows_positions[1][2], 0))
+
+	main_menu_active = true
+end
+
+local function load_options_items(self)
+	gui.set_enabled(self.start_game, false)
+	gui.set_enabled(self.options, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.credits, false)
+	gui.set_enabled(self.exit, false)
+	gui.set_enabled(self.left_selection_arrows, true)
+	gui.set_enabled(self.right_selection_arrows, true)
+
+	gui.set_enabled(self.options_return, true)
+	gui.set_enabled(self.options_sfx, true)
+	gui.set_enabled(self.options_music, true)
+
+	current_screen = "options"
+	selection_counter = 0
+
+	gui.set_position(self.left_selection_arrows,
+	vmath.vector3(options_left_selection_arrows_positions[1][1], options_left_selection_arrows_positions[1][2], 0))
+
+	gui.set_position(self.right_selection_arrows,
+	vmath.vector3(options_right_selection_arrows_positions[1][1], options_right_selection_arrows_positions[1][2], 0))
 end
 
 function init(self)
@@ -31,6 +88,11 @@ function init(self)
 	self.left_selection_arrows = gui.get_node("left_selection_arrows")
 	self.right_selection_arrows = gui.get_node("right_selection_arrows")
 
+	self.options_return = gui.get_node("options_return")
+	self.options_sfx = gui.get_node("options_sfx")
+	self.options_music = gui.get_node("options_music")
+	self.options_left_right_indicator = gui.get_node("options_left_right_indicator")
+
 	gui.set_visible(self.black, false)
 	gui.set_enabled(self.p840_logo, false)
 	gui.set_enabled(self.the_seven_stars, false)
@@ -44,23 +106,14 @@ function init(self)
 	gui.set_enabled(self.left_selection_arrows, false)
 	gui.set_enabled(self.right_selection_arrows, false)
 
+	gui.set_enabled(self.options_return, false)
+	gui.set_enabled(self.options_sfx, false)
+	gui.set_enabled(self.options_music, false)
+	gui.set_enabled(self.options_left_right_indicator, false)
+
 	gui.set_enabled(self.p840_logo, true)
 	
-	timer.delay(3, false, function()
-		gui.set_enabled(self.p840_logo, false)
-		gui.set_enabled(self.the_seven_stars, true)
-		gui.set_enabled(self.background, true)
-		gui.set_enabled(self.start_game, true)
-		gui.set_enabled(self.options, true)
-		gui.set_enabled(self.scores, true)
-		gui.set_enabled(self.scores, true)
-		gui.set_enabled(self.credits, true)
-		gui.set_enabled(self.exit, true)
-		gui.set_enabled(self.left_selection_arrows, true)
-		gui.set_enabled(self.right_selection_arrows, true)
-
-		main_menu_active = true
-	end) 
+	timer.delay(3, false, function() load_menu_items(self) end) 
 end
 
 
@@ -73,31 +126,84 @@ function on_input(self, action_id, action)
 		if action_id == hash("up") then
 			selection_counter = selection_counter - 1
 		end
-			
-		selection_counter = selection_counter % 5
+		
 
-	
-		gui.set_position(self.left_selection_arrows,
-		vmath.vector3(left_selection_arrows_positions[selection_counter + 1][1], left_selection_arrows_positions[selection_counter + 1][2], 0))
+		if current_screen == "main" then
+
+			selection_counter = selection_counter % 5
 			
-		gui.set_position(self.right_selection_arrows,
-		vmath.vector3(right_selection_arrows_positions[selection_counter + 1][1], right_selection_arrows_positions[selection_counter + 1][2], 0))
+			gui.set_position(self.left_selection_arrows,
+			vmath.vector3(left_selection_arrows_positions[selection_counter + 1][1], left_selection_arrows_positions[selection_counter + 1][2], 0))
+				
+			gui.set_position(self.right_selection_arrows,
+			vmath.vector3(right_selection_arrows_positions[selection_counter + 1][1], right_selection_arrows_positions[selection_counter + 1][2], 0))
+		else
+			
+			selection_counter = selection_counter % 3
+			
+			gui.set_position(self.left_selection_arrows,
+			vmath.vector3(options_left_selection_arrows_positions[selection_counter + 1][1], options_left_selection_arrows_positions[selection_counter + 1][2], 0))
+
+			gui.set_position(self.right_selection_arrows,
+			vmath.vector3(options_right_selection_arrows_positions[selection_counter + 1][1], options_right_selection_arrows_positions[selection_counter + 1][2], 0))
+		end
 	end
 
 	if action_id == hash("space") and action.pressed and main_menu_active == true then
 		print("space pressed")
 		print("counter = " .. tostring(selection_counter))
-		if selection_counter == 0 then
-			msg.post("/controller#main_controller", "start_game")		
+		if current_screen == "main" then
+			if selection_counter == 0 then
+				msg.post("/controller#main_controller", "start_game")		
+			end
+			if selection_counter == 1 then
+				load_options_items(self)			
+			end
+			if selection_counter == 2 then			
+			end
+			if selection_counter == 3 then			
+			end
+			if selection_counter == 4 then
+				sys.exit(0)			
+			end
+		else
+			if selection_counter == 0 then
+				gui.set_enabled(self.options_left_right_indicator, true)
+				timer.delay(1, false, function()
+					gui.set_enabled(self.options_left_right_indicator, false)
+				end)	
+			end
+			if selection_counter == 1 then
+				gui.set_enabled(self.options_left_right_indicator, true)
+				timer.delay(1, false, function()
+					gui.set_enabled(self.options_left_right_indicator, false)
+				end)			
+			end
+			if selection_counter == 2 then
+				load_menu_items(self)			
+			end
 		end
-		if selection_counter == 1 then			
+	end
+
+	if action_id == hash("left") and action.pressed and main_menu_active == true then
+		if current_screen == "options" and action.pressed and main_menu_active == true then
+			if selection_counter == 0 then
+				print("decrease music")			
+			end
+			if selection_counter == 1 then
+				print("decrease sfx")				
+			end
 		end
-		if selection_counter == 2 then			
-		end
-		if selection_counter == 3 then			
-		end
-		if selection_counter == 4 then
-			sys.exit(0)			
+	end
+
+	if action_id == hash("right") and action.pressed and main_menu_active == true then
+		if current_screen == "options" and action.pressed and main_menu_active == true then
+			if selection_counter == 0 then
+				print("increase music")			
+			end
+			if selection_counter == 1 then
+				print("increase sfx")				
+			end
 		end
 	end
 end

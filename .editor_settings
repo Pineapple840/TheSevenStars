@@ -1,7 +1,7 @@
 {
   :code {
     :find {
-      :term ""
+      :term "self.score_thresholds"
       :wrap true
     }
   }
@@ -10,46 +10,6 @@
   }
   :workflow {
     :recent-files [
-      [
-        "/main/game_objects/enemy2_bullet.go"
-        :scene
-      ]
-      [
-        "/main/game_objects/enemy2.go"
-        :scene
-      ]
-      [
-        "/main/pause_menu.gui"
-        :scene
-      ]
-      [
-        "/main/scripts/pause_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy_death.script"
-        :code
-      ]
-      [
-        "/main/game_objects/enemy2_death.go"
-        :scene
-      ]
-      [
-        "/main/game_images/enemy_2_death.tilesource"
-        :scene
-      ]
-      [
-        "/game resources/images/Foozle_2DS0016_Void_PickupsPack/Shield Generators/Aseprite/Pickup Icon - Shield Generator - All around shield.aseprite"
-        :code
-      ]
-      [
-        "/main/game_images/enemy2_weapons_copy.tilesource"
-        :scene
-      ]
-      [
-        "/main/game_objects/player.go"
-        :scene
-      ]
       [
         "/main/scripts/enemy_general.script"
         :code
@@ -79,18 +39,6 @@
         :scene
       ]
       [
-        "/main/level_1.collection"
-        :scene
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/scripts/main_menu.gui_script"
-        :code
-      ]
-      [
         "/main/game_images/enemy3_weapons.tilesource"
         :scene
       ]
@@ -99,7 +47,51 @@
         :scene
       ]
       [
-        "/main/level.collection"
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/game_objects/enemy3_bullet.go"
+        :scene
+      ]
+      [
+        "/main/scripts/pause_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/level_1.collection"
+        :scene
+      ]
+      [
+        "/main/game_info"
+        :code
+      ]
+      [
+        "/main/scripts/enemy3_bullet.script"
+        :code
+      ]
+      [
+        "/main/game_objects/enemy2_bullet.go"
+        :scene
+      ]
+      [
+        "/main/game_images/enemy_3_death.tilesource"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy2.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy3_death.go"
+        :scene
+      ]
+      [
+        "/main/game_objects/enemy3.go"
         :scene
       ]
       [
@@ -111,23 +103,19 @@
         :code
       ]
       [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
         "/main/scripts/main_controller.script"
         :code
       ]
       [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
-        "/main/game_objects/enemy3.go"
-        :scene
-      ]
-      [
-        "/main/scripts/pause.script"
-        :code
-      ]
-      [
-        "/main/game_objects/enemy3_bullet.go"
+        "/main/pause_menu.gui"
         :scene
       ]
       [
@@ -135,7 +123,19 @@
         :code
       ]
       [
-        "/main/scripts/enemy3_bullet.script"
+        "/main/scripts/hud.gui_script"
+        :code
+      ]
+      [
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/main_menu.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
         :code
       ]
     ]

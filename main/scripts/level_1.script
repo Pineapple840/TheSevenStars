@@ -1,5 +1,7 @@
 go.property("player_lives", 3)
 go.property("score", 0)
+local score_thresholds = {5000, 20000, 100000}
+local score_threshold_counter = 1
 
 local function game_over(self)
 	print("game_over")
@@ -82,9 +84,17 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("increase_score") then
 		print("level controller script has received message to add score")
 		self.score = self.score + message.value
+
+		if self.score >= score_thresholds[score_threshold_counter] then
+			msg.post("#", "change_life", {value = 1})
+			score_threshold_counter = score_threshold_counter + 1
+			msg.post("hud#hud", "set_threshold", {value = score_thresholds[score_threshold_counter]})
+		end
+		
 		print("score is", self.score)
 		msg.post("hud#hud", "set_score", {value = self.score})
 	end
+	
 	if message_id == hash("change_life") then
 		print("level controller script has received message to change life")
 		print("life count is", self.player_lives)

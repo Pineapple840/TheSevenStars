@@ -1,0 +1,12 @@
+image: "/game resources/images/Foozle_2DS0012_Void_EnemyFleet_1/Kla\'ed/Destruction/PNGs/Kla\'ed - Torpedo Ship - Destruction.png"
+tile_width: 64
+tile_height: 64
+collision_groups: "default"
+animations {
+  id: "anim"
+  start_tile: 1
+  end_tile: 9
+  fps: 20
+  flip_vertical: 1
+}
+extrude_borders: 2

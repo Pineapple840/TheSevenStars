@@ -73,7 +73,7 @@ nodes {
 }
 nodes {
   position {
-    x: 991.0
+    x: 975.0
     y: 300.0
   }
   scale {
@@ -81,7 +81,7 @@ nodes {
     y: 2.0
   }
   size {
-    x: 105.0
+    x: 101.0
     y: 30.0
   }
   type: TYPE_TEXT
@@ -94,7 +94,7 @@ nodes {
 }
 nodes {
   position {
-    x: 990.0
+    x: 975.0
     y: 240.0
   }
   scale {
@@ -116,7 +116,7 @@ nodes {
 }
 nodes {
   position {
-    x: 991.0
+    x: 975.0
     y: 180.0
   }
   scale {
@@ -137,7 +137,7 @@ nodes {
 }
 nodes {
   position {
-    x: 991.0
+    x: 975.0
     y: 120.0
   }
   scale {
@@ -158,7 +158,7 @@ nodes {
 }
 nodes {
   position {
-    x: 991.0
+    x: 975.0
     y: 60.0
   }
   scale {
@@ -202,8 +202,8 @@ nodes {
 }
 nodes {
   position {
-    x: 781.0
-    y: 300.0
+    x: 847.0
+    y: 90.0
   }
   scale {
     x: 2.0
@@ -223,8 +223,8 @@ nodes {
 }
 nodes {
   position {
-    x: 991.0
-    y: 300.0
+    x: 975.0
+    y: 210.0
   }
   scale {
     x: 2.0
@@ -239,6 +239,86 @@ nodes {
   font: "connection_bitmap_new"
   id: "right_selection_arrows"
   pivot: PIVOT_W
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 90.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 64.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Return"
+  font: "connection_bitmap_new"
+  id: "options_return"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 150.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 138.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "SFX Volume 50%"
+  font: "connection_bitmap_new"
+  id: "options_sfx"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 210.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 158.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Music Volume 50%"
+  font: "connection_bitmap_new"
+  id: "options_music"
+  pivot: PIVOT_E
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 847.0
+    y: 270.0
+  }
+  size {
+    x: 158.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Use the left/right arrows\n"
+  "to change volume"
+  font: "connection_bitmap_new"
+  id: "options_left_right_indicator"
   layer: "button_layer"
   inherit_alpha: true
 }
