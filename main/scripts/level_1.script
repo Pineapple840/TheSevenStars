@@ -6,11 +6,24 @@ local score_threshold_counter = 1
 local function game_over(self)
 	print("game_over")
 	msg.post("main:/game_loader#pause", "pause_from_game_over")
+	local score_file = sys.get_save_file("thesevenstars", "scores")
+	local scores = sys.load(score_file)
+	if self.score > scores.highscore then
+		local ok = sys.save(score_file, {highscore = self.score})
+		if not ok then
+			print("Failed to save", score_file)
+			return
+		end
+	end
 end
 
 function init(self)
 	self.player = factory.create("#player_spawner", vmath.vector3(512, 0, 0))
 	sound.play("#level_music_intro", {gain = 0.3})
+
+	local score_file = sys.get_save_file("thesevenstars", "scores")
+	local scores = sys.load(score_file)
+	msg.post("hud#hud", "set_high_score", {value = scores.highscore})
 	
 	timer.delay(5, false, function()
 		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))

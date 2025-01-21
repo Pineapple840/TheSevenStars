@@ -1,7 +1,57 @@
 local pause_menu_active = true
 local selection_counter = 0
-local right_selection_arrows_positions = {{658, 330}, {647, 246}}
-local left_selection_arrows_positions = {{366, 330}, {397, 246}}
+
+local current_screen = "main"
+
+local right_selection_arrows_positions = {{545, 262}, {536, 205}}
+local left_selection_arrows_positions = {{479, 246}, {489, 205}}
+
+local submission_right_selection_arrows_positions = {{663, 315}, {585, 249}, {571, 249}}
+local submission_left_selection_arrows_positions = {{361, 315}, {440, 249}, {453, 190}}
+
+local function load_main_items(self)
+
+	gui.set_enabled(self.game_over_text, true)
+	gui.set_enabled(self.save_score, true)
+	gui.set_enabled(self.yes, true)
+	gui.set_enabled(self.no, true)
+
+	gui.set_enabled(self.enter_name, false)
+	gui.set_enabled(self.text_box, false)
+	gui.set_enabled(self.confirm, false)
+	gui.set_enabled(self.cancel, false)
+
+	current_screen = "main"
+	selection_counter = 0
+
+	gui.set_position(self.left_selection_arrows,
+	vmath.vector3(left_selection_arrows_positions[1][1], left_selection_arrows_positions[1][2], 0))
+
+	gui.set_position(self.right_selection_arrows,
+	vmath.vector3(right_selection_arrows_positions[1][1], right_selection_arrows_positions[1][2], 0))
+end
+
+local function load_submission_items(self)
+
+	gui.set_enabled(self.game_over_text, false)
+	gui.set_enabled(self.save_score, false)
+	gui.set_enabled(self.yes, false)
+	gui.set_enabled(self.no, false)
+
+	gui.set_enabled(self.enter_name, true)
+	gui.set_enabled(self.text_box, true)
+	gui.set_enabled(self.confirm, true)
+	gui.set_enabled(self.cancel, true)
+	
+	current_screen = "options"
+	selection_counter = 0
+
+	gui.set_position(self.left_selection_arrows,
+	vmath.vector3(submission_left_selection_arrows_positions[1][1], submission_left_selection_arrows_positions[1][2], 0))
+
+	gui.set_position(self.right_selection_arrows,
+	vmath.vector3(submission_right_selection_arrows_positions[1][1], submission_right_selection_arrows_positions[1][2], 0))
+end
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
@@ -10,15 +60,62 @@ function init(self)
 	self.right_selection_arrows = gui.get_node("right_selection_arrows")
 	self.background = gui.get_node("background")
 	self.game_over_text = gui.get_node("game_over_text")
-	self.exit_to_menu = gui.get_node("exit_to_menu")
+	self.save_score = gui.get_node("save_score")
+	self.yes = gui.get_node("yes")
+	self.no = gui.get_node("no")
+
+	self.enter_name = gui.get_node("enter_name")
+	self.text_box = gui.get_node("text_box")
+	self.confirm = gui.get_node("confirm")
+	self.cancel = gui.get_node("cancel")
+
+	gui.set_enabled(self.enter_name, false)
+	gui.set_enabled(self.text_box, false)
+	gui.set_enabled(self.confirm, false)
+	gui.set_enabled(self.cancel, false)
+
+	gui.set_position(self.left_selection_arrows,
+	vmath.vector3(left_selection_arrows_positions[1][1], left_selection_arrows_positions[1][2], 0))
+
+	gui.set_position(self.right_selection_arrows,
+	vmath.vector3(right_selection_arrows_positions[1][1], right_selection_arrows_positions[1][2], 0))
 end
 
 
 
 function on_input(self, action_id, action)
+
+	if (action_id == hash("down") or action_id == hash("up")) and action.pressed and pause_menu_active == true then
+		if action_id == hash("down") then
+			selection_counter = selection_counter + 1
+		end
+
+		if action_id == hash("up") then
+			selection_counter = selection_counter - 1
+		end
+
+		selection_counter = selection_counter % 2
+
+
+		gui.set_position(self.left_selection_arrows,
+		vmath.vector3(left_selection_arrows_positions[selection_counter + 1][1], left_selection_arrows_positions[selection_counter + 1][2], 0))
+
+		gui.set_position(self.right_selection_arrows,
+		vmath.vector3(right_selection_arrows_positions[selection_counter + 1][1], right_selection_arrows_positions[selection_counter + 1][2], 0))
+	end
+	
 	if action_id == hash("space") and action.pressed and pause_menu_active == true then
-		print("space pressed")
-		msg.post("/game_loader#pause", "unpause")
-		msg.post("/controller#main_controller", "exit_to_menu")
+		
+		if selection_counter == 0 then
+			print("space pressed")
+			msg.post("/game_loader#pause", "unpause")
+			msg.post("/controller#main_controller", "exit_to_menu")
+		end
+		
+		if selection_counter == 1 then
+			print("space pressed")
+			msg.post("/game_loader#pause", "unpause")
+			msg.post("/controller#main_controller", "exit_to_menu")
+		end	
 	end
 end

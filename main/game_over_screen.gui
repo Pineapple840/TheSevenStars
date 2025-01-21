@@ -33,8 +33,8 @@ nodes {
 }
 nodes {
   position {
-    x: 396.0
-    y: 246.0
+    x: 453.0
+    y: 190.0
   }
   scale {
     x: 2.0
@@ -54,8 +54,8 @@ nodes {
 }
 nodes {
   position {
-    x: 627.0
-    y: 246.0
+    x: 571.0
+    y: 190.0
   }
   scale {
     x: 2.0
@@ -76,7 +76,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 246.0
+    y: 262.0
   }
   scale {
     x: 2.0
@@ -87,17 +87,17 @@ nodes {
     y: 30.0
   }
   type: TYPE_TEXT
-  text: "Exit To Menu\n"
+  text: "Yes\n"
   ""
   font: "connection_bitmap_new"
-  id: "exit_to_menu"
+  id: "yes"
   layer: "button_layer"
   inherit_alpha: true
 }
 nodes {
   position {
     x: 512.0
-    y: 330.0
+    y: 390.0
   }
   scale {
     x: 2.0
@@ -111,6 +111,138 @@ nodes {
   text: "Game Over!"
   font: "connection_bitmap_new"
   id: "game_over_text"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 342.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 146.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Save Score?"
+  font: "connection_bitmap_new"
+  id: "save_score"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 205.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 115.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "No"
+  font: "connection_bitmap_new"
+  id: "no"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 390.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 146.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Enter Name:"
+  font: "connection_bitmap_new"
+  id: "enter_name"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 315.0
+  }
+  size {
+    x: 300.0
+    y: 60.0
+  }
+  type: TYPE_BOX
+  id: "text_box"
+  layer: "button_layer"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 290.0
+    y: 50.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "box1"
+  parent: "text_box"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 512.0
+    y: 249.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 146.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Confirm"
+  font: "connection_bitmap_new"
+  id: "confirm"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 512.0
+    y: 190.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 146.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Cancel\n"
+  ""
+  font: "connection_bitmap_new"
+  id: "cancel"
   layer: "button_layer"
   inherit_alpha: true
 }

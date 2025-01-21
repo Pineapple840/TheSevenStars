@@ -12,6 +12,8 @@ function init(self)
 	msg.post("/loading_indicator", "disable")
 	msg.post("/pause_menu", "disable")
 	msg.post("/game_over_screen", "disable")
+
+	print(sys.get_save_file("thesevenstars", "scores"))
 end
 
 function on_message(self, message_id, message, sender)

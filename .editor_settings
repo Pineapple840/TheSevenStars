@@ -11,22 +11,6 @@
   :workflow {
     :recent-files [
       [
-        "/main/scripts/enemy_general.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy2_bullet.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy.script"
-        :code
-      ]
-      [
-        "/main/scripts/enemy2.script"
-        :code
-      ]
-      [
         "/main/game_objects/enemy1_death.go"
         :scene
       ]
@@ -53,14 +37,6 @@
       [
         "/main/game_objects/enemy3_bullet.go"
         :scene
-      ]
-      [
-        "/main/scripts/pause_menu.gui_script"
-        :code
-      ]
-      [
-        "/main/scripts/pause.script"
-        :code
       ]
       [
         "/main/level_1.collection"
@@ -111,23 +87,7 @@
         :scene
       ]
       [
-        "/main/scripts/main_controller.script"
-        :code
-      ]
-      [
         "/main/pause_menu.gui"
-        :scene
-      ]
-      [
-        "/main/scripts/level_1.script"
-        :code
-      ]
-      [
-        "/main/scripts/hud.gui_script"
-        :code
-      ]
-      [
-        "/main/hud.gui"
         :scene
       ]
       [
@@ -135,7 +95,47 @@
         :scene
       ]
       [
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/hud.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause_menu.gui_script"
+        :code
+      ]
+      [
+        "/input/game.input_binding"
+        :cljfx-form-view
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/game_over_screen.gui"
+        :scene
+      ]
+      [
         "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/game_over_screen.gui_script"
         :code
       ]
     ]

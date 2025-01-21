@@ -142,6 +142,38 @@ nodes {
   id: "score_threshold_val"
   inherit_alpha: true
 }
+nodes {
+  position {
+    x: 960.0
+    y: 342.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "High Score\n"
+  ""
+  font: "connection_bitmap_new"
+  id: "high_score"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 960.0
+    y: 324.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "0\n"
+  ""
+  font: "connection_bitmap_new"
+  id: "high_score_val"
+  inherit_alpha: true
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
 materials {
