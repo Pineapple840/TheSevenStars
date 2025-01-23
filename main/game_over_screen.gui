@@ -191,8 +191,8 @@ nodes {
 }
 nodes {
   size {
-    x: 290.0
-    y: 50.0
+    x: 295.0
+    y: 55.0
   }
   color {
     x: 0.0
@@ -204,6 +204,26 @@ nodes {
   parent: "text_box"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -145.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 150.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "F"
+  font: "connection_bitmap_new"
+  id: "name"
+  pivot: PIVOT_W
+  parent: "text_box"
+  inherit_alpha: true
 }
 nodes {
   position {

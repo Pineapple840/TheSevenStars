@@ -99,10 +99,6 @@
         :scene
       ]
       [
-        "/main/scripts/hud.gui_script"
-        :code
-      ]
-      [
         "/main/scripts/pause.script"
         :code
       ]
@@ -111,27 +107,31 @@
         :code
       ]
       [
-        "/input/game.input_binding"
-        :cljfx-form-view
-      ]
-      [
         "/game.project"
         :cljfx-form-view
-      ]
-      [
-        "/main/scripts/level_1.script"
-        :code
       ]
       [
         "/main/game_over_screen.gui"
         :scene
       ]
       [
-        "/main/scripts/main_menu.gui_script"
+        "/main/scripts/hud.gui_script"
         :code
       ]
       [
+        "/input/game.input_binding"
+        :cljfx-form-view
+      ]
+      [
         "/main/scripts/main_controller.script"
+        :code
+      ]
+      [
+        "/main/scripts/level_1.script"
+        :code
+      ]
+      [
+        "/main/scripts/main_menu.gui_script"
         :code
       ]
       [
