@@ -161,7 +161,7 @@ nodes {
 nodes {
   position {
     x: 960.0
-    y: 324.0
+    y: 301.0
   }
   size {
     x: 200.0
@@ -172,6 +172,21 @@ nodes {
   ""
   font: "connection_bitmap_new"
   id: "high_score_val"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 960.0
+    y: 318.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "-"
+  font: "connection_bitmap_new"
+  id: "high_score_name"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"

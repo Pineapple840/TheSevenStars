@@ -3,9 +3,11 @@ go.property("score", 0)
 local score_thresholds = {5000, 20000, 100000}
 local score_threshold_counter = 1
 
-local function game_over(self)
+local function game_over(self, complete)
 	print("game_over")
-	msg.post("main:/game_loader#pause", "pause_from_game_over")
+	msg.post("main:/game_loader#pause", "pause_from_game_over", {value = complete})
+	msg.post("main:/controller#main_controller", "submit_score", {value = self.score})
+	--[[
 	local score_file = sys.get_save_file("thesevenstars", "scores")
 	local scores = sys.load(score_file)
 	if self.score > scores.highscore then
@@ -15,6 +17,7 @@ local function game_over(self)
 			return
 		end
 	end
+	]]--
 end
 
 function init(self)
@@ -23,7 +26,9 @@ function init(self)
 
 	local score_file = sys.get_save_file("thesevenstars", "scores")
 	local scores = sys.load(score_file)
-	msg.post("hud#hud", "set_high_score", {value = scores.highscore})
+	print(scores.highscore)
+	print(scores.name)
+	msg.post("hud#hud", "set_high_score", {value = scores.highscore, name = scores.name})
 	
 	timer.delay(5, false, function()
 		factory.create("#enemy1_spawner", vmath.vector3(600, 440, 0))
@@ -80,6 +85,34 @@ function init(self)
 		factory.create("#enemy2_spawner", vmath.vector3(550, 480, 0))
 		factory.create("#enemy2_spawner", vmath.vector3(650, 520, 0))
 	end)
+
+	timer.delay(32, false, function()
+		factory.create("#enemy3_spawner", vmath.vector3(370, 440, 0))
+		factory.create("#enemy2_spawner", vmath.vector3(600, 480, 0))
+	end)
+
+	timer.delay(38, false, function()
+		factory.create("#enemy1_spawner", vmath.vector3(400, 440, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(420, 480, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(440, 520, 0))
+		
+		factory.create("#enemy2_spawner", vmath.vector3(450, 440, 0))
+		factory.create("#enemy2_spawner", vmath.vector3(550, 480, 0))
+		factory.create("#enemy2_spawner", vmath.vector3(650, 520, 0))
+	end)
+
+	timer.delay(40, false, function()
+		factory.create("#enemy3_spawner", vmath.vector3(550, 480, 0))
+		factory.create("#enemy3_spawner", vmath.vector3(650, 520, 0))
+
+		factory.create("#enemy1_spawner", vmath.vector3(500, 440, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(470, 480, 0))
+		factory.create("#enemy1_spawner", vmath.vector3(530, 480, 0))
+	end)
+
+	timer.delay(65, false, function()
+		game_over(self, true)
+	end)
 end
 
 
@@ -114,7 +147,7 @@ function on_message(self, message_id, message, sender)
 		self.player_lives = self.player_lives + message.value
 		msg.post("hud#hud", "set_lives", {value = self.player_lives})
 		if self.player_lives <= 0 then
-			game_over(self)
+			game_over(self, false)
 		end
 	end
 

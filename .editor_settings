@@ -1,7 +1,7 @@
 {
   :code {
     :find {
-      :term "self.score_thresholds"
+      :term "set_high"
       :wrap true
     }
   }
@@ -10,14 +10,6 @@
   }
   :workflow {
     :recent-files [
-      [
-        "/main/game_objects/enemy1_death.go"
-        :scene
-      ]
-      [
-        "/main/game_images/enemy_1_death.tilesource"
-        :scene
-      ]
       [
         "/main/game_images/enemy2_bullets.tilesource"
         :scene
@@ -31,20 +23,12 @@
         :scene
       ]
       [
-        "/main/scripts/player.script"
-        :code
-      ]
-      [
         "/main/game_objects/enemy3_bullet.go"
         :scene
       ]
       [
         "/main/level_1.collection"
         :scene
-      ]
-      [
-        "/main/game_info"
-        :code
       ]
       [
         "/main/scripts/enemy3_bullet.script"
@@ -75,32 +59,12 @@
         :code
       ]
       [
-        "/main/scripts/game_loader.script"
-        :code
-      ]
-      [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/level.collection"
-        :scene
-      ]
-      [
         "/main/pause_menu.gui"
         :scene
       ]
       [
         "/main/main_menu.gui"
         :scene
-      ]
-      [
-        "/main/hud.gui"
-        :scene
-      ]
-      [
-        "/main/scripts/pause.script"
-        :code
       ]
       [
         "/main/scripts/pause_menu.gui_script"
@@ -115,15 +79,39 @@
         :scene
       ]
       [
-        "/main/scripts/hud.gui_script"
-        :code
-      ]
-      [
         "/input/game.input_binding"
         :cljfx-form-view
       ]
       [
-        "/main/scripts/main_controller.script"
+        "/main/scripts/main_menu.gui_script"
+        :code
+      ]
+      [
+        "/main/hud.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/player.script"
+        :code
+      ]
+      [
+        "/main/game_objects/player.go"
+        :scene
+      ]
+      [
+        "/main/level.collection"
+        :scene
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/game_info"
+        :code
+      ]
+      [
+        "/main/scripts/hud.gui_script"
         :code
       ]
       [
@@ -131,11 +119,23 @@
         :code
       ]
       [
-        "/main/scripts/main_menu.gui_script"
+        "/main/loading_indicator.gui"
+        :scene
+      ]
+      [
+        "/main/scripts/game_loader.script"
+        :code
+      ]
+      [
+        "/main/scripts/pause.script"
         :code
       ]
       [
         "/main/scripts/game_over_screen.gui_script"
+        :code
+      ]
+      [
+        "/main/scripts/main_controller.script"
         :code
       ]
     ]

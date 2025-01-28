@@ -72,6 +72,13 @@ function init(self)
 	self.cancel = gui.get_node("cancel")
 	self.name = gui.get_node("name")
 
+	gui.set_text(self.name, "")
+
+	gui.set_enabled(self.game_over_text, true)
+	gui.set_enabled(self.save_score, true)
+	gui.set_enabled(self.yes, true)
+	gui.set_enabled(self.no, true)
+
 	gui.set_enabled(self.enter_name, false)
 	gui.set_enabled(self.text_box, false)
 	gui.set_enabled(self.confirm, false)
@@ -84,7 +91,11 @@ function init(self)
 	vmath.vector3(right_selection_arrows_positions[1][1], right_selection_arrows_positions[1][2], 0))
 end
 
-
+function on_message(self, message_id, message, sender)
+	if message_id == hash("change_message_text") then
+		gui.set_text(self.game_over_text, "Well done for beating the game!")
+	end
+end
 
 function on_input(self, action_id, action)
 
@@ -131,10 +142,15 @@ function on_input(self, action_id, action)
 				msg.post("/controller#main_controller", "exit_to_menu")
 			end
 		else
+			
 			if selection_counter == 0 then
 			end
 
 			if selection_counter == 1 then
+				print("space pressed")
+				msg.post("/game_loader#pause", "unpause")
+				msg.post("/controller#main_controller", "exit_to_menu")
+				msg.post("/controller#main_controller", "submit_name", {value = player_name})
 			end
 				
 			if selection_counter == 2 then
@@ -144,14 +160,10 @@ function on_input(self, action_id, action)
 		end	
 	end
 
-	if action_id == hash("type") then
-		print("fuuuu")
-	end
 
 	if action_id == hash("type") and pause_menu_active == true and current_screen == "submission" and selection_counter == 0 then
 		player_name = player_name .. action.text
 		gui.set_text(self.name, player_name) -- <4>
-		print("type")
 	end
 	
 	if action_id == hash("backspace") and action.repeated and pause_menu_active == true and current_screen == "submission" and selection_counter == 0 then

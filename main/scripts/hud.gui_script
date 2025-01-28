@@ -11,6 +11,7 @@ function init(self)
 	self.score_threshold_val = gui.get_node("score_threshold_val")
 	self.high_score = gui.get_node("high_score")
 	self.high_score_val = gui.get_node("high_score_val")
+	self.high_score_name = gui.get_node("high_score_name")
 end
 
 function on_message(self, message_id, message, sender)
@@ -25,5 +26,6 @@ function on_message(self, message_id, message, sender)
 	end
 	if message_id == hash("set_high_score") then
 		gui.set_text(self.high_score_val, message.value)
+		gui.set_text(self.high_score_name, message.name)
 	end
 end

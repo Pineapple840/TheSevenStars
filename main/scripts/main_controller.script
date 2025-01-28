@@ -1,5 +1,9 @@
 -- Script summary: Provides general support related to game actions
 
+local new_score = 0
+local new_name = ""
+
+
 
 local function start_game(self)
 	print("Game Started!")
@@ -14,6 +18,23 @@ function init(self)
 	msg.post("/game_over_screen", "disable")
 
 	print(sys.get_save_file("thesevenstars", "scores"))
+
+	local score_file = sys.get_save_file("thesevenstars", "scores")
+	local scores = sys.load(score_file)
+	if scores.name == nil then
+		local ok = sys.save(score_file, {name = "default"})
+		if not ok then
+			print("Failed to save", score_file)
+			return
+		end
+	end
+	if scores.highscore == nil then
+		local ok = sys.save(score_file, {highscore = 0})
+		if not ok then
+			print("Failed to save", score_file)
+			return
+		end
+	end
 end
 
 function on_message(self, message_id, message, sender)
@@ -25,5 +46,19 @@ function on_message(self, message_id, message, sender)
 		msg.post("/pause_menu#pause_menu", "disable")
 		msg.post("/game_over_screen#game_over_screen", "disable")
 		msg.post("/gui#main_menu", "load_menu")
+	end
+
+	if message_id == hash("submit_score") then
+		new_score = message.value
+	end
+
+	if message_id == hash("submit_name") then
+		new_name = message.value
+
+		local score_file = sys.get_save_file("thesevenstars", "scores")
+		local scores = sys.load(score_file)
+		if new_score > scores.highscore then
+			sys.save(score_file, {highscore = new_score, name = new_name})
+		end
 	end
 end

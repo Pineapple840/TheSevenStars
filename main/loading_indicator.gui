@@ -2,6 +2,10 @@ fonts {
   name: "connection_bitmap"
   font: "/game resources/fonts/connection_bitmap.font"
 }
+fonts {
+  name: "connection_bitmap_new"
+  font: "/game resources/fonts/connection_bitmap_new.font"
+}
 nodes {
   position {
     x: 835.0
