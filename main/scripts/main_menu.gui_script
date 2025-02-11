@@ -4,10 +4,14 @@ local current_screen = "main"
 
 local selection_counter = 0
 local right_selection_arrows_positions = {{980, 300}, {980, 240}, {980, 180}, {980, 120}, {980, 60}}
-local left_selection_arrows_positions = {{767, 300}, {834, 240}, {850, 180}, {841, 120}, {901, 60}}
+local left_selection_arrows_positions = {{767, 300}, {834, 240}, {788, 180}, {841, 120}, {901, 60}}
 
 local options_right_selection_arrows_positions = {{980, 210}, {980, 150}, {980, 90}}
 local options_left_selection_arrows_positions = {{654, 210}, {694, 150}, {842, 90}}
+
+GLOBAL_MUSIC_VOLUME = 0.5
+GLOBAL_SFX_VOLUME = 0.5
+
 
 local function load_menu(self)
 	gui.set_position(self.left_selection_arrows,
@@ -35,6 +39,9 @@ local function load_menu_items(self)
 	gui.set_enabled(self.options_return, false)
 	gui.set_enabled(self.options_sfx, false)
 	gui.set_enabled(self.options_music, false)
+
+	gui.set_enabled(self.scores_menu, false)
+	gui.set_enabled(self.credits_menu, false)
 
 	current_screen = "main"
 	selection_counter = 0
@@ -72,6 +79,63 @@ local function load_options_items(self)
 	vmath.vector3(options_right_selection_arrows_positions[1][1], options_right_selection_arrows_positions[1][2], 0))
 end
 
+local function load_scores_items(self)
+	gui.set_enabled(self.start_game, false)
+	gui.set_enabled(self.options, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.credits, false)
+	gui.set_enabled(self.exit, false)
+	gui.set_enabled(self.left_selection_arrows, true)
+	gui.set_enabled(self.right_selection_arrows, true)
+
+	gui.set_enabled(self.scores_menu, true)
+
+	gui.set_enabled(self.score1, false)
+	gui.set_enabled(self.name1, false)
+
+	
+	local score_file = sys.get_save_file("thesevenstars", "scores")
+	local scores = sys.load(score_file)
+
+	if scores.highscore ~= nil and scores.name ~= nil then
+		gui.set_enabled(self.score1, true)
+		gui.set_enabled(self.name1, true)
+		gui.set_text(self.score1, scores.highscore)
+		gui.set_text(self.name1, scores.name)
+	end
+
+	current_screen = "scores"
+	selection_counter = 0
+
+	gui.set_position(self.left_selection_arrows, vmath.vector3(842, 90, 0))
+
+	gui.set_position(self.right_selection_arrows, vmath.vector3(980, 90, 0))
+end
+
+local function load_credits_items(self)
+	gui.set_enabled(self.start_game, false)
+	gui.set_enabled(self.options, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.scores, false)
+	gui.set_enabled(self.credits, false)
+	gui.set_enabled(self.exit, false)
+	gui.set_enabled(self.left_selection_arrows, true)
+	gui.set_enabled(self.right_selection_arrows, true)
+
+	gui.set_enabled(self.credits_menu, true)
+
+
+
+	
+	current_screen = "credits"
+	selection_counter = 0
+
+	gui.set_position(self.left_selection_arrows, vmath.vector3(842, 90, 0))
+
+	gui.set_position(self.right_selection_arrows, vmath.vector3(980, 90, 0))
+end
+
 function init(self)
 	print(msg.url())
 	msg.post(".", "acquire_input_focus")
@@ -93,6 +157,12 @@ function init(self)
 	self.options_music = gui.get_node("options_music")
 	self.options_left_right_indicator = gui.get_node("options_left_right_indicator")
 
+	self.scores_menu = gui.get_node("scores_menu")
+	self.score1 = gui.get_node("score1")
+	self.name1 = gui.get_node("name1")
+
+	self.credits_menu = gui.get_node("credits_menu")
+
 	gui.set_visible(self.black, false)
 	gui.set_enabled(self.p840_logo, false)
 	gui.set_enabled(self.the_seven_stars, false)
@@ -110,6 +180,9 @@ function init(self)
 	gui.set_enabled(self.options_sfx, false)
 	gui.set_enabled(self.options_music, false)
 	gui.set_enabled(self.options_left_right_indicator, false)
+
+	gui.set_enabled(self.scores_menu, false)
+	gui.set_enabled(self.credits_menu, false)
 
 	gui.set_enabled(self.p840_logo, true)
 	
@@ -137,7 +210,7 @@ function on_input(self, action_id, action)
 				
 			gui.set_position(self.right_selection_arrows,
 			vmath.vector3(right_selection_arrows_positions[selection_counter + 1][1], right_selection_arrows_positions[selection_counter + 1][2], 0))
-		else
+		elseif current_screen == "options" then
 			
 			selection_counter = selection_counter % 3
 			
@@ -146,7 +219,14 @@ function on_input(self, action_id, action)
 
 			gui.set_position(self.right_selection_arrows,
 			vmath.vector3(options_right_selection_arrows_positions[selection_counter + 1][1], options_right_selection_arrows_positions[selection_counter + 1][2], 0))
+			
+		elseif current_screen == "scores" then
+			selection_counter = selection_counter % 1
+	
+		elseif current_screen == "credits" then
+			selection_counter = selection_counter % 1
 		end
+		
 	end
 
 	if action_id == hash("space") and action.pressed and main_menu_active == true then
@@ -159,14 +239,25 @@ function on_input(self, action_id, action)
 			if selection_counter == 1 then
 				load_options_items(self)			
 			end
-			if selection_counter == 2 then			
+			if selection_counter == 2 then
+				main_menu_active = false
+				timer.delay(0.01, false, function()
+					load_scores_items(self)
+					main_menu_active = true
+				end)			
 			end
-			if selection_counter == 3 then			
+			if selection_counter == 3 then
+				main_menu_active = false
+				timer.delay(0.01, false, function()
+					load_credits_items(self)
+					main_menu_active = true
+				end)				
 			end
 			if selection_counter == 4 then
 				sys.exit(0)			
 			end
-		else
+		end
+		if current_screen == "options" then
 			if selection_counter == 0 then
 				gui.set_enabled(self.options_left_right_indicator, true)
 				timer.delay(1, false, function()
@@ -182,6 +273,12 @@ function on_input(self, action_id, action)
 			if selection_counter == 2 then
 				load_menu_items(self)			
 			end
+		end
+		if current_screen == "scores" then
+			load_menu_items(self)
+		end
+		if current_screen == "credits" then
+			load_menu_items(self)
 		end
 	end
 

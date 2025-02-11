@@ -1,7 +1,7 @@
 local pause_menu_active = true
 local selection_counter = 0
 local right_selection_arrows_positions = {{658, 330}, {627, 246}}
-local left_selection_arrows_positions = {{479, 262}, {397, 246}}
+local left_selection_arrows_positions = {{366, 262}, {397, 246}}
 
 function init(self)
 	msg.post(".", "acquire_input_focus")

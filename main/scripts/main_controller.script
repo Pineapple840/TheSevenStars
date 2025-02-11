@@ -21,20 +21,17 @@ function init(self)
 
 	local score_file = sys.get_save_file("thesevenstars", "scores")
 	local scores = sys.load(score_file)
+
+	
 	if scores.name == nil then
-		local ok = sys.save(score_file, {name = "default"})
-		if not ok then
-			print("Failed to save", score_file)
-			return
-		end
+		scores.name = "default" 
 	end
+
+	
 	if scores.highscore == nil then
-		local ok = sys.save(score_file, {highscore = 0})
-		if not ok then
-			print("Failed to save", score_file)
-			return
-		end
+		scores.highscore = "0"
 	end
+
 end
 
 function on_message(self, message_id, message, sender)
@@ -57,7 +54,12 @@ function on_message(self, message_id, message, sender)
 
 		local score_file = sys.get_save_file("thesevenstars", "scores")
 		local scores = sys.load(score_file)
-		if new_score > scores.highscore then
+		
+		if scores.highscore ~= nil then
+			if new_score > scores.highscore then
+				sys.save(score_file, {highscore = new_score, name = new_name})
+			end
+		else
 			sys.save(score_file, {highscore = new_score, name = new_name})
 		end
 	end

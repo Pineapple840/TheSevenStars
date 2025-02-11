@@ -48,6 +48,8 @@ local function load_submission_items(self)
 	current_screen = "submission"
 	selection_counter = 0
 
+	gui.set_text(self.name, "")
+
 	gui.set_position(self.left_selection_arrows,
 	vmath.vector3(submission_left_selection_arrows_positions[1][1], submission_left_selection_arrows_positions[1][2], 0))
 
@@ -162,8 +164,11 @@ function on_input(self, action_id, action)
 
 
 	if action_id == hash("type") and pause_menu_active == true and current_screen == "submission" and selection_counter == 0 then
-		player_name = player_name .. action.text
-		gui.set_text(self.name, player_name) -- <4>
+		local l = string.len(player_name)
+		if l < 12 then
+			player_name = player_name .. action.text
+			gui.set_text(self.name, player_name) -- <4>
+		end
 	end
 	
 	if action_id == hash("backspace") and action.repeated and pause_menu_active == true and current_screen == "submission" and selection_counter == 0 then

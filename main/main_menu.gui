@@ -33,7 +33,7 @@ nodes {
     y: 100.0
   }
   type: TYPE_TEXT
-  text: "*insert my epic logo here*"
+  text: "Finn Aggarwal Studios"
   font: "connection_bitmap_new"
   id: "p840_logo"
   layer: "button_layer"
@@ -128,7 +128,7 @@ nodes {
     y: 30.0
   }
   type: TYPE_TEXT
-  text: "Scores"
+  text: "Highscore"
   font: "connection_bitmap_new"
   id: "scores"
   pivot: PIVOT_E
@@ -202,8 +202,8 @@ nodes {
 }
 nodes {
   position {
-    x: 847.0
-    y: 90.0
+    x: 788.0
+    y: 179.0
   }
   scale {
     x: 2.0
@@ -319,6 +319,283 @@ nodes {
   "to change volume"
   font: "connection_bitmap_new"
   id: "options_left_right_indicator"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "connection_bitmap_new"
+  id: "scores_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 833.0
+    y: 470.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 60.0
+    y: 20.0
+  }
+  type: TYPE_TEXT
+  text: "name1"
+  font: "connection_bitmap_new"
+  id: "name1"
+  pivot: PIVOT_E
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "name5"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "name2"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "name3"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "name4"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 856.0
+    y: 470.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 60.0
+    y: 20.0
+  }
+  type: TYPE_TEXT
+  text: "Score1"
+  font: "connection_bitmap_new"
+  id: "score1"
+  pivot: PIVOT_W
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "score5"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "score2"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "score3"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "connection_bitmap_new"
+  id: "score4"
+  parent: "scores_menu"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 90.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 64.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Return"
+  font: "connection_bitmap_new"
+  id: "scores_return"
+  pivot: PIVOT_E
+  parent: "scores_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "credits_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 975.0
+    y: 484.0
+  }
+  size {
+    x: 101.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Game by Finn Aggarwal"
+  font: "connection_bitmap_new"
+  id: "credits_1"
+  pivot: PIVOT_E
+  parent: "credits_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 447.0
+  }
+  size {
+    x: 101.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Ship Sprites - Void by Foozle (itch.io)"
+  font: "connection_bitmap_new"
+  id: "credits_2"
+  pivot: PIVOT_E
+  parent: "credits_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 414.0
+  }
+  size {
+    x: 101.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Background - Space background generator by Deep-Fold (itch.io)"
+  font: "connection_bitmap_new"
+  id: "credits_"
+  pivot: PIVOT_E
+  parent: "credits_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 377.0
+  }
+  size {
+    x: 101.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Music - Space Adventure by Lucasberry (Newgrounds)"
+  font: "connection_bitmap_new"
+  id: "credits_3"
+  pivot: PIVOT_E
+  parent: "credits_menu"
+  layer: "button_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 975.0
+    y: 90.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 64.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "Return"
+  font: "connection_bitmap_new"
+  id: "credits_return"
+  pivot: PIVOT_E
+  parent: "credits_menu"
   layer: "button_layer"
   inherit_alpha: true
 }

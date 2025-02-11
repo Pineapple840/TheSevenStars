@@ -1,4 +1,4 @@
-go.property("health", 150)
+go.property("health")
 go.property("dead", false)
 
 local function death(self)

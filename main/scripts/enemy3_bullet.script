@@ -7,17 +7,6 @@ local function track_player(self, dt)
 	end
 end
 
-function init(self)
-	local pos = go.get_position()
-	timer.delay(0, false, function()
-		
-		self.pos = go.get_position()
-		msg.post("/level_1_controller#level_1", "return_player_position")
-
-		
-	end)
-end
-
 function on_message(self, message_id, message, sender, dt)
 	if message_id == hash("trigger_response") and message.enter then
 		go.delete()
@@ -32,16 +21,15 @@ function on_message(self, message_id, message, sender, dt)
 			go.delete()
 		end
 
-		--local rot_amount = math.rad(self.rotation_speed * self.input.x * dt)
 		local rot = vmath.quat_rotation_z(math.atan2(self.player_pos.y - self.pos.y, self.player_pos.x - self.pos.x) + math.pi/2)
 
-		local UP = vmath.vector3(0, -1, 0)
+		local DOWN = vmath.vector3(0, -1, 0)
 		local targetr = vmath.slerp(0.01, self.direction, rot)
 		go.set_rotation(targetr)
-		local move_right = vmath.rotate(targetr, UP)
+		local move_direction = vmath.rotate(targetr, DOWN)
 		
 		local p = go.get_position()
-		p = p + 2 * move_right
+		p = p + 2 * move_direction
 		go.set_position(p)
 		
 	end
